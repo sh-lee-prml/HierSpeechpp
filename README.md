@@ -23,7 +23,9 @@ This paper is an extenstion version of above papers.
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
 - [ ] Text-to-Vec (For Text-to-Speech)
 - [ ] Text-to-Vec-Large (For Much More Expressive Text-to-Speech)
-```- [ ] Text-to-Vec-Large-ML (For Multi-lingual Text-to-Speech)```
+```
+- [ ] Text-to-Vec-Large-ML (For Multi-lingual Text-to-Speech)
+```
 
 ## Getting Started
 
