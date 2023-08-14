@@ -29,13 +29,13 @@ This paper is an extenstion version of above papers.
 ### Pre-requisites
 
 ## Checkpoint
-| Model |Sampling Rate|Dataset |Checkpoint|
-|------|:---:|:---:|:---:|
-| HierSpeech2 |16 kHz| LibriTTS (train-460) |-|
-| HierSpeech2-Large|16 kHz| LibriTTS (train-460)  |-|
-| HierSpeech2-Large-Full|16 kHz| LibriTTS (train-960, VCTK, CSS10, NIKL, Others)  |-|
-| HierSpeech2-Large-Full|24 kHz| Not Available |Not Available|
-| HierSpeech2-Large-Full|48 kHz| Not Available |Not Available|
+| Model |Sampling Rate|Params|Dataset |Checkpoint|
+|------|:---:|:---:|:---:|:---:|
+| HierSpeech2 |16 kHz|75M| LibriTTS (train-460) |-|
+| HierSpeech2-Large|200M|16 kHz| LibriTTS (train-460)  |-|
+| HierSpeech2-Large-Full|200M|16 kHz| LibriTTS (train-960, VCTK, CSS10, NIKL, Others)  |-|
+| HierSpeech2-Large-Full|200M|24 kHz| Not Available |Not Available|
+| HierSpeech2-Large-Full|200M|48 kHz| Not Available |Not Available|
 
 
 ## Reference
