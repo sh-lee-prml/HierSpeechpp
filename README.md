@@ -34,7 +34,9 @@ This paper is an extenstion version of above papers.
 | HierSpeech2 |16 kHz| LibriTTS (train-clean-360, train-clean-100) |-|
 | HierSpeech2-Large|16 kHz| LibriTTS (train-clean-360, train-clean-100)  |-|
 | HierSpeech2-Large-Full|16 kHz| LibriTTS (train-clean-360, train-clean-100, train-other-500, VCTK, CSS10, NIKL, Others)  |-|
-| HierSpeech2-Large|24 kHz| Not Available |-|
+| HierSpeech2-Large-Full|24 kHz| Not Available |Not Available|
+| HierSpeech2-Large-Full|48 kHz| Not Available |Not Available|
+
 
 ## Reference
 - HierSpeech:
