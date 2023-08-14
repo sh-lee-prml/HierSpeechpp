@@ -31,9 +31,9 @@ This paper is an extenstion version of above papers.
 ## Checkpoint
 | Model |Sampling Rate|Dataset |Checkpoint|
 |------|:---:|:---:|:---:|
-| HierSpeech2 |16 kHz| LibriTTS (train-clean-360, train-clean-100) |-|
-| HierSpeech2-Large|16 kHz| LibriTTS (train-clean-360, train-clean-100)  |-|
-| HierSpeech2-Large-Full|16 kHz| LibriTTS (train-clean-360, train-clean-100, train-other-500, VCTK, CSS10, NIKL, Others)  |-|
+| HierSpeech2 |16 kHz| LibriTTS (train-460) |-|
+| HierSpeech2-Large|16 kHz| LibriTTS (train-460)  |-|
+| HierSpeech2-Large-Full|16 kHz| LibriTTS (train-960, VCTK, CSS10, NIKL, Others)  |-|
 | HierSpeech2-Large-Full|24 kHz| Not Available |Not Available|
 | HierSpeech2-Large-Full|48 kHz| Not Available |Not Available|
 
