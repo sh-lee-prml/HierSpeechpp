@@ -15,10 +15,8 @@ Department of Artificial Intelligence, Korea University, Seoul, Korea
 
 This paper is an extenstion version of above papers.
 
-## Updates
-- ** 1 October, 2023**: Release H
 ## Todo
-[ ] 
+- [ ] HierSpeech2
 
 ## Getting Started
 
@@ -30,7 +28,7 @@ This paper is an extenstion version of above papers.
 | HierSpeech2 |16 kHz| LibriTTS (train-clean-360, train-clean-100) |-|
 | HierSpeech2-Large|16 kHz| LibriTTS (train-clean-360, train-clean-100)  |-|
 | HierSpeech2-Large-Full|16 kHz| LibriTTS (train-clean-360, train-clean-100, train-other-500, VCTK, CSS10, NIKL, Others)  |-|
-| HierSpeech2-Large|24 kHz| LibriTTS (train-clean-360, train-clean-100, train-other-500, VCTK, Others)  |-|
+| HierSpeech2-Large|24 kHz| Not Available |-|
 ## Reference
 - VITS: https://github.com/jaywalnut310/vits
 - UnivNET: https://github.com/mindslab-ai/univnet
