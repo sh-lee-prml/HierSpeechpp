@@ -25,11 +25,12 @@ This paper is an extenstion version of above papers.
 ### Pre-requisites
 
 ## Checkpoint
-| Model |Dataset |Checkpoint|
-|------|:---:|:---:|
-| HierSpeech2 | LibriTTS (train-clean-360, train-clean-100) |-|
-| HierSpeech2-Large  | LibriTTS (train-clean-360, train-clean-100)  |-|
-| HierSpeech2-Large-Full  | LibriTTS (train-clean-360, train-clean-100, train-other-500, VCTK, CSS10, NIKL, Others)  |-|
+| Model |Sampling Rate|Dataset |Checkpoint|
+|------|:---:|:---:|:---:|
+| HierSpeech2 |16 kHz| LibriTTS (train-clean-360, train-clean-100) |-|
+| HierSpeech2-Large|16 kHz| LibriTTS (train-clean-360, train-clean-100)  |-|
+| HierSpeech2-Large-Full|16 kHz| LibriTTS (train-clean-360, train-clean-100, train-other-500, VCTK, CSS10, NIKL, Others)  |-|
+| HierSpeech2-Large|24 kHz| LibriTTS (train-clean-360, train-clean-100, train-other-500, VCTK, Others)  |-|
 ## Reference
 - VITS: https://github.com/jaywalnut310/vits
 - UnivNET: https://github.com/mindslab-ai/univnet
