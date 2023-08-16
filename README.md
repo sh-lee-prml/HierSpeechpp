@@ -38,6 +38,19 @@ This paper is an extenstion version of above papers.
 | HierSpeech2-Large-Full|48 kHz|200M| Not Available |Not Available|
 
 
+## Voice Conversion
+- Todo
+- 
+## Text-to-Speech
+- Todo
+- 
+## F0 Extraction
+- Todo
+- 
+## Neural Upsampling
+- Todo
+- 
+
 ## Reference
 - HierSpeech:
 - HierVST:
