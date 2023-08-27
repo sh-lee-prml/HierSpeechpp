@@ -76,7 +76,7 @@ This paper is an extenstion version of above papers.
 - SDT: Efficient Speech Diffusion Transformer Models
 
 ### Our Goals
-- Integrating the pros of each model for High-quality, High-diversity and High-fidelity Speech Synthesis Models 
+- Integrating each model for High-quality, High-diversity and High-fidelity Speech Synthesis Models 
 
 ## Reference
 ### Our Previous Works
