@@ -52,6 +52,25 @@ This paper is an extenstion version of above papers.
 - Todo
 - 
 
+## GAN VS Diffusion
+### GAN (Specifically, VITS-based End-to-End Speech Synthesis Models)
+- (pros) Fast Inference Speed 
+- (pros) High-quality Audio
+- (cons) Slow Training Speed (Over 7 Days)
+- (cons) Lower Voice Style Transfer Performance than Diffusion Models
+- (cons) Perceptually High-quality but Over-smoothed Audio because of Information Bottleneck by the sampling from the low-dimensional Latent Variable
+   
+### Diffusion (Diffusion-based Mel-spectrogram Generation Models)
+- (pros) Fast Training Speed (within 3 Days)
+- (pros) High-quality Voice Style Transfer
+- (cons) Slow Inference Speed
+- (cons) Lower Audio quality than End-to-End Speech Synthesis Models 
+
+### Our Approaches
+- Improving Voice Style Transfer Performance in End-to-End Speech Synthesis Models for OOD (Zero-shot Voice Style Transfer for Novel Speaker)
+- Improving the Audio Quality beyond Perceptal Quality for Much more High-fidelity Audio Generation
+
+
 ## Reference
 ### Our Previous Works
 - HierSpeech/HierSpeech-U for Hierarchical Speech Synthesis Framework: https://openreview.net/forum?id=awdyRVnfQKX
