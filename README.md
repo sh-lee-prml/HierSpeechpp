@@ -33,7 +33,8 @@ This paper is an extenstion version of above papers.
 |------|:---:|:---:|:---:|:---:|
 | HierSpeech2 |16 kHz|75M| LibriTTS (train-460) |-|
 | HierSpeech2-Large|16 kHz|200M| LibriTTS (train-460)  |-|
-| HierSpeech2-Large-Full|16 kHz|200M| LibriTTS (train-960, VCTK, CSS10, NIKL, Others)  |-|
+| HierSpeech2-Large-Korean|16 kHz|200M| LibriTTS (train-460, NIKL, AudioBook-Korean)  |-|
+| HierSpeech2-Large-Full|16 kHz|200M| LibriTTS (train-960, NIKL, AudioBook-Korean)  |-|
 | HierSpeech2-Large-Full|24 kHz|200M| Not Available |Not Available|
 | HierSpeech2-Large-Full|48 kHz|200M| Not Available |Not Available|
 
@@ -52,14 +53,23 @@ This paper is an extenstion version of above papers.
 - 
 
 ## Reference
-- HierSpeech:
-- HierVST:
-- DDDM-VC:
-- Diff-HierVC:
+### Our Previous Works (Baseline)
+- HierSpeech/HierSpeech-U: https://openreview.net/forum?id=awdyRVnfQKX
+- HierVST for Baseline Speech Backbone: https://www.isca-speech.org/archive/interspeech_2023/lee23i_interspeech.html 
+- DDDM-VC: https://dddm-vc.github.io/
+- Diff-HierVC: https://diff-hiervc.github.io/
+  
+### Baseline Model
 - VITS: https://github.com/jaywalnut310/vits
+- NANSY for Audio Perturbation: https://github.com/revsic/torch-nansy
+  
+### Waveform Generator for High-quality Audio Generation
+- BigVGAN for High-quality Generator: https://arxiv.org/abs/2206.04658
 - UnivNET: https://github.com/mindslab-ai/univnet
+- EnCodec: https://github.com/facebookresearch/encodec
+
+### Self-supervised Speech Model 
 - Wav2Vec 2.0: https://arxiv.org/abs/2006.11477
 - XLS-R: https://huggingface.co/facebook/wav2vec2-xls-r-300m
-- MMS:  
-- BigVGAN: https://arxiv.org/abs/2206.04658
-- NANSY: 
+- MMS: https://huggingface.co/facebook/facebook/mms-300m
+
