@@ -53,7 +53,7 @@ This paper is an extenstion version of above papers.
 - 
 
 ## GAN VS Diffusion
-We think that we could not confirm which is better yet. There are many advatanges for each model so you can utilize each model for your own purposes. 
+We think that we could not confirm which is better yet. There are many advatanges for each model so you can utilize each model for your own purposes and each study must be actively conducted simultaneously.  
 
 ### GAN (Specifically, GAN-based End-to-End Speech Synthesis Models)
 - (pros) Fast Inference Speed 
