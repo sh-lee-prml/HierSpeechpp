@@ -91,6 +91,7 @@ This paper is an extenstion version of above papers.
 - NANSY for Audio Perturbation: https://github.com/revsic/torch-nansy
   
 ### Waveform Generator for High-quality Audio Generation
+- HiFi-GAN: https://github.com/jik876/hifi-gan 
 - BigVGAN for High-quality Generator: https://arxiv.org/abs/2206.04658
 - UnivNET: https://github.com/mindslab-ai/univnet
 - EnCodec: https://github.com/facebookresearch/encodec
