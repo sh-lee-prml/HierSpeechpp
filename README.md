@@ -56,7 +56,7 @@ This paper is an extenstion version of above papers.
 ### GAN (Specifically, GAN-based End-to-End Speech Synthesis Models)
 - (pros) Fast Inference Speed 
 - (pros) High-quality Audio
-- (cons) Slow Training Speed (Over 7 Days)
+- (cons) Slow Training Speed (Over 7~20 Days)
 - (cons) Lower Voice Style Transfer Performance than Diffusion Models
 - (cons) Perceptually High-quality but Over-smoothed Audio because of Information Bottleneck by the sampling from the low-dimensional Latent Variable
    
