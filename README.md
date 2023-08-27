@@ -53,7 +53,7 @@ This paper is an extenstion version of above papers.
 - 
 
 ## GAN VS Diffusion
-### GAN (Specifically, VITS-based End-to-End Speech Synthesis Models)
+### GAN (Specifically, GAN-based End-to-End Speech Synthesis Models)
 - (pros) Fast Inference Speed 
 - (pros) High-quality Audio
 - (cons) Slow Training Speed (Over 7 Days)
@@ -66,10 +66,17 @@ This paper is an extenstion version of above papers.
 - (cons) Slow Inference Speed
 - (cons) Lower Audio quality than End-to-End Speech Synthesis Models 
 
-### Our Approaches
+### (In this wors) Our Approaches for GAN-based End-to-End Speech Synthesis Models 
 - Improving Voice Style Transfer Performance in End-to-End Speech Synthesis Models for OOD (Zero-shot Voice Style Transfer for Novel Speaker)
 - Improving the Audio Quality beyond Perceptal Quality for Much more High-fidelity Audio Generation
 
+### (Our other works) Diffusion-based Mel-spectrogram Generation Models
+- DDDM-VC: Disentangled Denoising Diffusion Models for High-quality and High-diversity Speech Synthesis Models
+- Diff-hierVC: Hierarhical Diffusion-based Speech Synthesis Model with Diffusion-based Pitch Modeling
+- SDT: Efficient Speech Diffusion Transformer Models
+
+### Our Goals
+- Integrating the pros of each model for High-quality, High-diversity and High-fidelity Speech Synthesis Models 
 
 ## Reference
 ### Our Previous Works
