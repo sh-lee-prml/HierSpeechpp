@@ -53,7 +53,7 @@ This paper is an extenstion version of above papers.
 - 
 
 ## Reference
-### Our Previous Works (Baseline)
+### Our Previous Works
 - HierSpeech/HierSpeech-U: https://openreview.net/forum?id=awdyRVnfQKX
 - HierVST for Baseline Speech Backbone: https://www.isca-speech.org/archive/interspeech_2023/lee23i_interspeech.html 
 - DDDM-VC: https://dddm-vc.github.io/
