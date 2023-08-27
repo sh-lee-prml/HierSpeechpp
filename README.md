@@ -89,6 +89,7 @@ This paper is an extenstion version of above papers.
 ### Baseline Model
 - VITS: https://github.com/jaywalnut310/vits
 - NANSY for Audio Perturbation: https://github.com/revsic/torch-nansy
+- Speech Resynthesis: https://github.com/facebookresearch/speech-resynthesis
   
 ### Waveform Generator for High-quality Audio Generation
 - HiFi-GAN: https://github.com/jik876/hifi-gan 
