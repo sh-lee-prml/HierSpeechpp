@@ -84,6 +84,7 @@ This paper is an extenstion version of above papers.
 - HierVST for Baseline Speech Backbone: https://www.isca-speech.org/archive/interspeech_2023/lee23i_interspeech.html 
 - DDDM-VC: https://dddm-vc.github.io/
 - Diff-HierVC: https://diff-hiervc.github.io/
+- SDT: https://sdt.github.io/
   
 ### Baseline Model
 - VITS: https://github.com/jaywalnut310/vits
