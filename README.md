@@ -95,10 +95,12 @@ We think that we could not confirm which is better yet. There are many advatange
 ## Reference
 ### Our Previous Works
 - HierSpeech/HierSpeech-U for Hierarchical Speech Synthesis Framework: https://openreview.net/forum?id=awdyRVnfQKX
-- HierVST for Baseline Speech Backbone: https://www.isca-speech.org/archive/interspeech_2023/lee23i_interspeech.html 
+- HierVST for Baseline Speech Backbone: https://www.isca-speech.org/archive/interspeech_2023/lee23i_interspeech.html
+- Period VITS: https://ieeexplore.ieee.org/abstract/document/10096480
 - DDDM-VC: https://dddm-vc.github.io/
 - Diff-HierVC: https://diff-hiervc.github.io/
 - SDT: https://sdt.github.io/
+
   
 ### Baseline Model
 - VITS: https://github.com/jaywalnut310/vits
