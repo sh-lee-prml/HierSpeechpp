@@ -16,6 +16,7 @@ Department of Artificial Intelligence, Korea University, Seoul, Korea
 This paper is an extenstion version of above papers.
 
 ## Todo
+### Speech Backbone
 - [ ] HierSpeech2-16k (Efficient but Strong Zero-shot Speech Synthesizier)
 - [ ] HierSpeech2-16k-Large (For Much More Strong Zero-shot Speech Synthesizer)
 - [ ] HierSpeech2-16k-Large-Full (For High-quality Cross-lingual Speech Synthesizer)
@@ -23,9 +24,14 @@ This paper is an extenstion version of above papers.
 - [ ] HierSpeech2-24k-Large-Full (For High-resolutional and High-quality Speech Synthesizer)
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
 -->
+### Text-to-Linguistic Model
 - [ ] Text-to-Vec (For Text-to-Speech)
 - [ ] Text-to-Vec-Large (For Much More Expressive Text-to-Speech)
-- [ ] Audio Super-resolution (For High-quality and High-resolutional Speech Synthesizer
+
+### Audio Super-resolution Model (16k --> 32k or 48k) 
+- [ ] Audio Super-resolution-32k (For High-quality and High-resolutional Speech Synthesis)
+- [ ] Audio Super-resolution-48k
+
 ## Getting Started
 
 ### Pre-requisites
@@ -37,9 +43,10 @@ This paper is an extenstion version of above papers.
 | HierSpeech2-Large|16 kHz|200M| LibriTTS (train-460)  |-|
 | HierSpeech2-Large-Full|16 kHz|200M| LibriTTS (train-960)  |-|
 | HierSpeech2-Large-Korean|16 kHz|200M| LibriTTS (train-960, NIKL, AudioBook-Korean)  |-|
+<!--
 | HierSpeech2-Large-Full|24 kHz|200M| Not Available |Not Available|
 | HierSpeech2-Large-Full|48 kHz|200M| Not Available |Not Available|
-
+-->
 
 ## Voice Conversion
 - Todo
