@@ -19,10 +19,10 @@ This paper is an extenstion version of above papers.
 - [ ] HierSpeech2-16k (Efficient but Strong Zero-shot Speech Synthesizier)
 - [ ] HierSpeech2-16k-Large (For Much More Strong Zero-shot Speech Synthesizer)
 - [ ] HierSpeech2-16k-Large-Full (For High-quality Cross-lingual Speech Synthesizer)
-```
+<!--
 - [ ] HierSpeech2-24k-Large-Full (For High-resolutional and High-quality Speech Synthesizer)
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
-```
+-->
 - [ ] Text-to-Vec (For Text-to-Speech)
 - [ ] Text-to-Vec-Large (For Much More Expressive Text-to-Speech)
 - [ ] Audio Super-resolution (For High-quality and High-resolutional Speech Synthesizer
