@@ -105,6 +105,7 @@ We think that we could not confirm which is better yet. There are many advatange
 ### Baseline Model
 - VITS: https://github.com/jaywalnut310/vits
 - Period VITS: https://ieeexplore.ieee.org/abstract/document/10096480
+- NaturalSpeech: 
 - NANSY for Audio Perturbation: https://github.com/revsic/torch-nansy
 - Speech Resynthesis: https://github.com/facebookresearch/speech-resynthesis
   
@@ -119,3 +120,11 @@ We think that we could not confirm which is better yet. There are many advatange
 - XLS-R: https://huggingface.co/facebook/wav2vec2-xls-r-300m
 - MMS: https://huggingface.co/facebook/facebook/mms-300m
 
+### Other Large Language Model based Speech Synthesis Model
+- VALL-E & VALL-E-X:
+- SPEAR-TTS:
+- NaturalSpeech 2: 
+- Make-a-Voice:
+- MEGA-TTS & MEGA-TTS 2:
+
+Although there are some recent works utilizing hierarchical speech synthesis frameworks using self-supervised speech representation, it is worth noting that HierSpeech [NeurIPS2022] is the first hierarchical speech synthesis models using self-supervised speech representation.
