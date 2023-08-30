@@ -27,7 +27,7 @@ This paper is an extenstion version of above papers.
 -->
 ### Text-to-Linguistic Model
 - [ ] Text-to-Vec (For Text-to-Speech)
-- [ ] Text-to-Vec-Large (For Much More Expressive Text-to-Speech)
+- [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 
 ### Audio Super-resolution Model (16k --> 32k or 48k) 
 - [ ] Audio Super-resolution-32k (For High-quality and High-resolutional Speech Synthesis)
