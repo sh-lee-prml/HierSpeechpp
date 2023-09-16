@@ -37,11 +37,11 @@ This paper is an extenstion version of above papers.
 
 ## Checkpoint
 ### Speech Backbone
-| Model |Sampling Rate|Params|Dataset |Checkpoint|
-|------|:---:|:---:|:---:|:---:|
-| HierSpeech2 |16 kHz|90M| LibriTTS (train-460) |-|
-| HierSpeech2 |16 kHz|90M| LibriTTS (train-960) |-|
-| HierSpeech2-Full|16 kHz|90M| LibriTTS (train-960), NIKL, AudioBook-Korean)  |-|
+| Model |Sampling Rate|Params|Dataset |Hour|Speaker|Checkpoint|
+|------|:---:|:---:|:---:|:---:|:---:|:---:|
+| HierSpeech2 |16 kHz|90M| LibriTTS (train-460) |245|1,151|-|
+| HierSpeech2 |16 kHz|90M| LibriTTS (train-960) |555.08|2,311|-|
+| HierSpeech2-Full|16 kHz|90M| Libri-light, AiHub-Korean) |20k| - |-|
 
 <!--
 | HierSpeech2-Lite|16 kHz|-| LibriTTS (train-960))  |-|
@@ -51,10 +51,10 @@ This paper is an extenstion version of above papers.
 | HierSpeech2-Large-Full|48 kHz|200M| Not Available |Not Available|
 -->
 ### TTV
-| Model |Sampling Rate|Params|Dataset |Checkpoint|
-|------|:---:|:---:|:---:|:---:|
-| TTV |16 kHz|50M| LibriTTS (train-960) |-|
-| TTV-Lite |16 kHz|10M| LibriTTS (train-960) |-|
+| Model |Language|Params|Dataset|Hour|Speaker|Checkpoint|
+|------|:---:|:---:|:---:|:---:|:---:|:---:|
+| TTV |English|50M| LibriTTS (train-960) |555.08|2,311|-|
+| TTV-Lite |English|10M| LibriTTS (train-960) |555.08|2,311|-|
 
 ### SpeechSR
 | Model |Sampling Rate|Params|Dataset |Checkpoint|
