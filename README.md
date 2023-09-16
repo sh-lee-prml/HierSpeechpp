@@ -39,9 +39,9 @@ This paper is an extenstion version of above papers.
 ### Speech Backbone
 | Model |Sampling Rate|Params|Dataset|Hour|Speaker|Checkpoint|
 |------|:---:|:---:|:---:|:---:|:---:|:---:|
-| HierSpeech2 |16 kHz|90M| LibriTTS (train-460) |245|1,151|-|
-| HierSpeech2 |16 kHz|90M| LibriTTS (train-960) |555.08|2,311|-|
-| HierSpeech2-Full|16 kHz|90M| Libri-light, AiHub-Korean) |20k| - |-|
+| HierSpeech2|16 kHz|90M| LibriTTS (train-460) |245|1,151|-|
+| HierSpeech2|16 kHz|90M| LibriTTS (train-960) |555.08|2,311|-|
+| HierSpeech2|16 kHz|90M| Libri-light, AiHub-Korean) |20k| - |-|
 
 <!--
 | HierSpeech2-Lite|16 kHz|-| LibriTTS (train-960))  |-|
