@@ -41,7 +41,7 @@ This paper is an extenstion version of above papers.
 |------|:---:|:---:|:---:|:---:|:---:|:---:|
 | HierSpeech2|16 kHz|90M| LibriTTS (train-460) |245|1,151|-|
 | HierSpeech2|16 kHz|90M| LibriTTS (train-960) |555|2,311|-|
-| HierSpeech2|16 kHz|90M| Libri-light, AiHub-Korean) |20k| - |-|
+| HierSpeech2|16 kHz|90M| Libri-light, AiHub-Korean|20k| - |-|
 
 <!--
 | HierSpeech2-Lite|16 kHz|-| LibriTTS (train-960))  |-|
