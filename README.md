@@ -18,7 +18,9 @@ This paper is an extenstion version of above papers.
 ### Speech Backbone
 - [ ] HierSpeech2 (Efficient but Strong Zero-shot Speech Synthesizier)
 - [ ] HierSpeech2-Large (For Much More Strong Zero-shot Speech Synthesizer)
-- [ ] HierSpeech2-Lite (Fast and Efficient Zero-shot Speech Synthesizer)
+- [ ] HierSpeech-Lite (Fast and Efficient Zero-shot Speech Synthesizer)
+- [ ] HierSinger (Zero-shot Singing Voice Synthesizer)
+      
 <!--
 - [ ] HierSpeech2-24k-Large-Full (For High-resolutional and High-quality Speech Synthesizer)
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
