@@ -17,10 +17,9 @@ This paper is an extenstion version of above papers.
 
 ## Todo
 ### Speech Backbone
-- [ ] HierSpeech2-16k (Efficient but Strong Zero-shot Speech Synthesizier)
-- [ ] HierSpeech2-16k-Large (For Much More Strong Zero-shot Speech Synthesizer)
-- [ ] HierSpeech2-16k-Large-Full (For High-quality Cross-lingual Speech Synthesizer)
-- [ ] HierSpeech2-16k-Light (Fast and Efficient Zero-shot Speech Synthesizer)
+- [ ] HierSpeech2 (Efficient but Strong Zero-shot Speech Synthesizier)
+- [ ] HierSpeech2-Large (For Much More Strong Zero-shot Speech Synthesizer)
+- [ ] HierSpeech2-Lite (Fast and Efficient Zero-shot Speech Synthesizer)
 <!--
 - [ ] HierSpeech2-24k-Large-Full (For High-resolutional and High-quality Speech Synthesizer)
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
@@ -29,26 +28,39 @@ This paper is an extenstion version of above papers.
 - [ ] Text-to-Vec (For Text-to-Speech)
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 
-### Audio Super-resolution Model (16k --> 32k or 48k) 
-- [ ] Audio Super-resolution-32k (For High-quality and High-resolutional Speech Synthesis)
-- [ ] Audio Super-resolution-48k
+### Audio Super-resolution Model (16k --> 24k or 48k) 
+- [ ] SpeechSR-24k
+- [ ] SpeechSR-48k
 
 ## Getting Started
 
 ### Pre-requisites
 
 ## Checkpoint
+### Speech Backbone
 | Model |Sampling Rate|Params|Dataset |Checkpoint|
 |------|:---:|:---:|:---:|:---:|
-| HierSpeech2 |16 kHz|75M| LibriTTS (train-460) |-|
-| HierSpeech2-Large|16 kHz|200M| LibriTTS (train-460)  |-|
-| HierSpeech2-Large-Full|16 kHz|200M| LibriTTS (train-960)  |-|
-| HierSpeech2-Large-Korean|16 kHz|200M| LibriTTS (train-960) NIKL, AudioBook-Korean)  |-|
-| HierSpeech2-Large-CL|16 kHz|200M| LibriTTS (train-960), Libri-Light, NIKL, AudioBook-Korean, Japanese, Chinese, CSS, MLS)  |-|
+| HierSpeech2 |16 kHz|90M| LibriTTS (train-460) |-|
+| HierSpeech2 |16 kHz|90M| LibriTTS (train-960) |-|
+| HierSpeech2-Large|16 kHz|200M| LibriTTS (train-960)  |-|
+| HierSpeech2-Large-Full|16 kHz|200M| LibriTTS (train-960) NIKL, AudioBook-Korean)  |-|
+
 <!--
+| HierSpeech2-Large-CL|16 kHz|200M| LibriTTS (train-960), Libri-Light, NIKL, AudioBook-Korean, Japanese, Chinese, CSS, MLS)  |-|
 | HierSpeech2-Large-Full|24 kHz|200M| Not Available |Not Available|
 | HierSpeech2-Large-Full|48 kHz|200M| Not Available |Not Available|
 -->
+### TTV
+| Model |Sampling Rate|Params|Dataset |Checkpoint|
+|------|:---:|:---:|:---:|:---:|
+| TTV |16 kHz|50M| LibriTTS (train-960) |-|
+| TTV-Lite |16 kHz|10M| LibriTTS (train-960) |-|
+
+### SpeechSR
+| Model |Sampling Rate|Params|Dataset |Checkpoint|
+|------|:---:|:---:|:---:|:---:|
+| SpeechSR-24k |16kHz --> 24 kHz|0.03M| LibriTTS (train-960), AudioBook-Korean |-|
+| SpeechSR-48k |16kHz --> 48 kHz|0.05M| AudioBook-Korean, AudioSet |-|
 
 ## Voice Conversion
 - Todo
@@ -59,7 +71,7 @@ This paper is an extenstion version of above papers.
 ## F0 Extraction
 - Todo
 - 
-## Neural Upsampling
+## Speech Super-resolution
 - Todo
 - 
 
