@@ -41,7 +41,7 @@ This paper is an extenstion version of above papers.
 |------|:---:|:---:|:---:|:---:|
 | HierSpeech2 |16 kHz|90M| LibriTTS (train-460) |-|
 | HierSpeech2 |16 kHz|90M| LibriTTS (train-960) |-|
-| HierSpeech2-Full|16 kHz|90M| LibriTTS (train-960) NIKL, AudioBook-Korean)  |-|
+| HierSpeech2-Full|16 kHz|90M| LibriTTS (train-960), NIKL, AudioBook-Korean)  |-|
 
 <!--
 | HierSpeech2-Lite|16 kHz|-| LibriTTS (train-960))  |-|
