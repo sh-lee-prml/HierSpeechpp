@@ -53,8 +53,8 @@ This paper is an extenstion version of above papers.
 ### TTV
 | Model |Language|Params|Dataset|Hour|Speaker|Checkpoint|
 |------|:---:|:---:|:---:|:---:|:---:|:---:|
-| TTV |English|50M| LibriTTS (train-960) |555|2,311|-|
-| TTV-Lite |English|10M| LibriTTS (train-960) |555|2,311|-|
+| TTV |Eng|50M| LibriTTS (train-960) |555|2,311|-|
+| TTV-Lite |Eng|10M| LibriTTS (train-960) |555|2,311|-|
 | TTV |Kor|50M| NIKL |114|118|-|
 
 ### SpeechSR
