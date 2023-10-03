@@ -1,4 +1,4 @@
-# HierSpeech2: Hierarhical Variational Autoencoder is a Strong Zero-shot Speech Synthesizer 
+# HierSpeech2: Bridging the Gap between Semantic and Acoustic Representation by Hierarchical Variational Inference for Zero-shot Speech Synthesis
 The official implementation of HierSpeech2 | [Paper]() | [Demo page]()
 
 **Sang-Hoon Lee, Ha-Yeong Choi, Seong-Whan Lee**
