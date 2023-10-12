@@ -79,7 +79,9 @@ This paper is an extenstion version of above papers.
 - 
 ## Speech Super-resolution
 - Todo
-- 
+
+## Speech Denoising for Noise-free Speech Synthesis (Only used in Speaker Encoder during Inference)
+- Todo
 
 ## GAN VS Diffusion
 
