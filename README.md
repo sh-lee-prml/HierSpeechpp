@@ -44,37 +44,37 @@ This paper is an extenstion version of above papers.
 ### Speech Backbone
 | Model |Sampling Rate|Params|Dataset|Hour|Speaker|Checkpoint|
 |------|:---:|:---:|:---:|:---:|:---:|:---:|
-| HierSpeech2|16 kHz|90M| LibriTTS (train-460) |245|1,151|-|
-| HierSpeech2|16 kHz|90M| LibriTTS (train-960) |555|2,311|-|
-| HierSpeech2|16 kHz|90M| Libri-light, AiHub-Korean|20k| - |-|
+| HierSpeech2|16 kHz|97M| LibriTTS (train-960) |555|2,311|-|
+| HierSpeech2|16 kHz|97M| LibriTTS (train-960), Libri-light (Small, Medium), Expresso, MMS(Kor), NIKL(Kor)|20k| 10,000 |-|
 
 <!--
 | HierSpeech2-Lite|16 kHz|-| LibriTTS (train-960))  |-|
 | HierSpeech2-Lite|16 kHz|-| LibriTTS (train-960) NIKL, AudioBook-Korean)  |-|
 | HierSpeech2-Large-CL|16 kHz|200M| LibriTTS (train-960), Libri-Light, NIKL, AudioBook-Korean, Japanese, Chinese, CSS, MLS)  |-|
-| HierSpeech2-Large-Full|24 kHz|200M| Not Available |Not Available|
-| HierSpeech2-Large-Full|48 kHz|200M| Not Available |Not Available|
 -->
+
 ### TTV
 | Model |Language|Params|Dataset|Hour|Speaker|Checkpoint|
 |------|:---:|:---:|:---:|:---:|:---:|:---:|
+| TTV |Eng|100M| LibriTTS (train-960) |555|2,311|-|
+| TTV |Kor|100M| NIKL |114|118|-|
+
+<!--
 | TTV |Eng|50M| LibriTTS (train-960) |555|2,311|-|
+| TTV-Large |Eng|100M| LibriTTS (train-960) |555|2,311|-|
 | TTV-Lite |Eng|10M| LibriTTS (train-960) |555|2,311|-|
 | TTV |Kor|50M| NIKL |114|118|-|
-
+-->
 ### SpeechSR
 | Model |Sampling Rate|Params|Dataset |Checkpoint|
 |------|:---:|:---:|:---:|:---:|
-| SpeechSR-24k |16kHz --> 24 kHz|0.03M| LibriTTS (train-960), AudioBook-Korean |-|
-| SpeechSR-48k |16kHz --> 48 kHz|0.05M| AudioBook-Korean, AudioSet |-|
+| SpeechSR-24k |16kHz --> 24 kHz|0.03M| LibriTTS (train-960), MMS (Kor) |-|
+| SpeechSR-48k |16kHz --> 48 kHz|0.05M| MMS (Kor), Singing (Kor), Expresso (Eng)|-|
 
 ## Voice Conversion
 - Todo
 - 
 ## Text-to-Speech
-- Todo
-- 
-## F0 Extraction
 - Todo
 - 
 ## Speech Super-resolution
