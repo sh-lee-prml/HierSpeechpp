@@ -19,7 +19,7 @@ The official implementation of HierSpeech3 | [Paper]() | [Demo page]()
 This paper is an extenstion version of above papers.
 
 ## Todo
-### Speech Backbone
+### Hierarchical Speech Synthesizer
 - [ ] HierSpeech2 (Fast but Strong Zero-shot Speech Synthesizier)
 <!--
 - [ ] HierSpeech-Lite (Fast and Efficient Zero-shot Speech Synthesizer)
@@ -27,12 +27,12 @@ This paper is an extenstion version of above papers.
 - [ ] HierSpeech2-24k-Large-Full (For High-resolutional and High-quality Speech Synthesizer)
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
 -->
-### Text-to-Linguistic Model
+### Text-to-Vec (TTV)
 - [ ] Text-to-Vec (For Text-to-Speech)
 <!--
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 -->
-### Audio Super-resolution Model (16k --> 24k or 48k) 
+### Speech Super-resolution (16k --> 24k or 48k) 
 - [ ] SpeechSR-24k
 - [ ] SpeechSR-48k
 
