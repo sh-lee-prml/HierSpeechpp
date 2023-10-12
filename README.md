@@ -6,7 +6,7 @@ The official implementation of HierSpeech2 | [Paper]() | [Demo page]()
 The official implementation of HierSpeech3 | [Paper]() | [Demo page]()
 -->
 
-**Sang-Hoon Lee, Ha-Yeong Choi, Seong-Whan Lee**
+**Sang-Hoon Lee, Ha-Yeong Choi, Seung-Bin Kim, Seong-Whan Lee**
 
  Department of Artificial Intelligence, Korea University, Seoul, Korea  
 
