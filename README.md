@@ -12,8 +12,7 @@ The official implementation of HierSpeech3 | [Paper]() | [Demo page]()
 
 ## Abstract
 
-
-## Previous Works
+## Previous Our Works
 - [1] HierSpeech: Bridging the Gap between Text and Speech by Hierarchical Variational Inference using Self-supervised Representations for Speech Synthesis
 - [2] HierVST: Hierarchical Adaptive Zero-shot Voice Style Transfer
 
@@ -21,19 +20,18 @@ This paper is an extenstion version of above papers.
 
 ## Todo
 ### Speech Backbone
-- [ ] HierSpeech2 (Efficient but Strong Zero-shot Speech Synthesizier)
-- [ ] HierSpeech2-Large (For Much More Strong Zero-shot Speech Synthesizer)
+- [ ] HierSpeech2 (Fast but Strong Zero-shot Speech Synthesizier)
+<!--
 - [ ] HierSpeech-Lite (Fast and Efficient Zero-shot Speech Synthesizer)
 - [ ] HierSinger (Zero-shot Singing Voice Synthesizer)
-      
-<!--
 - [ ] HierSpeech2-24k-Large-Full (For High-resolutional and High-quality Speech Synthesizer)
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
 -->
 ### Text-to-Linguistic Model
 - [ ] Text-to-Vec (For Text-to-Speech)
+<!--
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
-
+-->
 ### Audio Super-resolution Model (16k --> 24k or 48k) 
 - [ ] SpeechSR-24k
 - [ ] SpeechSR-48k
