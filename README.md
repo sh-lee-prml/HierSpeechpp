@@ -41,7 +41,7 @@ This paper is an extenstion version of above papers.
 ### Pre-requisites
 
 ## Checkpoint
-### Speech Backbone
+### Hierarchical Speech Synthesizer
 | Model |Sampling Rate|Params|Dataset|Hour|Speaker|Checkpoint|
 |------|:---:|:---:|:---:|:---:|:---:|:---:|
 | HierSpeech2|16 kHz|97M| LibriTTS (train-960) |555|2,311|-|
