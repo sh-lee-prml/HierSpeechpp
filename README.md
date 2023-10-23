@@ -150,5 +150,5 @@ In my very personal opinion, VITS is still the best TTS model I have ever seen. 
 - NaturalSpeech 2: 
 - Make-a-Voice:
 - MEGA-TTS & MEGA-TTS 2:
-
-Although there are some recent works utilizing hierarchical speech synthesis frameworks using self-supervised speech representation, it is worth noting that HierSpeech [NeurIPS2022] is the first hierarchical speech synthesis models using self-supervised speech representation.
+<!--
+Although there are some recent works utilizing hierarchical speech synthesis frameworks using self-supervised speech representation, it is worth noting that HierSpeech [NeurIPS2022] is the first hierarchical speech synthesis models using self-supervised speech representation.-->
