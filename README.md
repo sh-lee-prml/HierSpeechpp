@@ -20,7 +20,7 @@ This paper is an extenstion version of above papers.
 
 ## Todo
 ### Hierarchical Speech Synthesizer
-- [ ] HierSpeech2 (Fast but Strong Zero-shot Speech Synthesizier)
+- [ ] HierSpeech2-Backbone
 <!--
 - [ ] HierSpeech-Lite (Fast and Efficient Zero-shot Speech Synthesizer)
 - [ ] HierSinger (Zero-shot Singing Voice Synthesizer)
@@ -28,7 +28,7 @@ This paper is an extenstion version of above papers.
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
 -->
 ### Text-to-Vec (TTV)
-- [ ] Text-to-Vec (For Text-to-Speech)
+- [ ] Text-to-Vec (T-Flow)
 <!--
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 -->
