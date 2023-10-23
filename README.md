@@ -112,7 +112,7 @@ We think that we could not confirm which is better yet. There are many advatange
 ### Our Goals
 - Integrating each model for High-quality, High-diversity and High-fidelity Speech Synthesis Models 
 
-### LLM-based Models
+## LLM-based Models
 We hope to compare LLM-based models for zero-shot TTS baselines. However, there is no public-available official implementation of LLM-based TTS models. Unfortunately, unofficial models have a poor performance in zero-shot TTS so we hope they will release their model for a fair comparison and reproducibility and for our speech community.
 
 In my very personal opinion, VITS is still the best TTS model I have ever seen. But, I acknowledge that LLM-based models have much powerful potential for their creative generative performance from the large-scale dataset. 
