@@ -119,8 +119,7 @@ In my very personal opinion, VITS is still the best TTS model I have ever seen. 
 
 ## Limitation of our work
 - Slow training speed and Relatively large model size (Compared with VITS) --> Future work: Light-weight and Fast training pipeline
-- Could not generate realistic background sound --> Future work: adding audio generation part
-
+- Could not generate realistic background sound --> Future work: adding audio generation part by disentangling speech and sound. 
 
 ## Reference
 ### Our Previous Works
