@@ -115,7 +115,7 @@ We think that we could not confirm which is better yet. There are many advatange
 ## LLM-based Models
 We hope to compare LLM-based models for zero-shot TTS baselines. However, there is no public-available official implementation of LLM-based TTS models. Unfortunately, unofficial models have a poor performance in zero-shot TTS so we hope they will release their model for a fair comparison and reproducibility and for our speech community. THB I could not tolerate the inference speed of unofficial VALL-E above 200 times slower than e2e models It takes 5 days ㅡㅡ to synthesize the full sentences of LibriTTS-test subsets. Even, the audio quality is so so so s oso bad. I hope MS to release their official source code. 
 
-In my very personal opinion, VITS is still the best TTS model I have ever seen. But, I acknowledge that LLM-based models have much powerful potential for their creative generative performance from the large-scale dataset but not now 
+In my very personal opinion, VITS is still the best TTS model I have ever seen. But, I acknowledge that LLM-based models have much powerful potential for their creative generative performance from the large-scale dataset but not now. I don't think it is a good baseline models for zero-shot TTS.
 
 ## Limitation of our work
 - Slow training speed and Relatively large model size (Compared with VITS) --> Future work: Light-weight and Fast training pipeline
