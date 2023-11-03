@@ -30,6 +30,7 @@ This paper is an extenstion version of above papers.
 ### Text-to-Vec (TTV)
 - [ ] Text-to-Vec (LibriTTS-train-960)
 - [ ] Multi-lingual Text-to-Vec (Will be released in Dec. 2023)
+- [ ] Korean TTV (Will be released in 2024)
 <!--
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 -->
