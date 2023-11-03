@@ -28,7 +28,8 @@ This paper is an extenstion version of above papers.
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
 -->
 ### Text-to-Vec (TTV)
-- [ ] Text-to-Vec (T-Flow)
+- [ ] Text-to-Vec (LibriTTS-train-960)
+- [ ] Multi-lingual Text-to-Vec (Will be released in Dec. 2023)
 <!--
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 -->
@@ -113,12 +114,12 @@ We think that we could not confirm which is better yet. There are many advatange
 - Integrating each model for High-quality, High-diversity and High-fidelity Speech Synthesis Models 
 
 ## LLM-based Models
-We hope to compare LLM-based models for zero-shot TTS baselines. However, there is no public-available official implementation of LLM-based TTS models. Unfortunately, unofficial models have a poor performance in zero-shot TTS so we hope they will release their model for a fair comparison and reproducibility and for our speech community. THB I could not tolerate the inference speed of unofficial VALL-E above 200 times slower than e2e models It takes 5 days ㅡㅡ to synthesize the full sentences of LibriTTS-test subsets. Even, the audio quality is so so so s oso bad. I hope MS will release their official source code soon. 
+We hope to compare LLM-based models for zero-shot TTS baselines. However, there is no public-available official implementation of LLM-based TTS models. Unfortunately, unofficial models have a poor performance in zero-shot TTS so we hope they will release their model for a fair comparison and reproducibility and for our speech community. THB I could not tolerate the inference speed of unofficial models above 2,000 times slower than e2e models It takes 5 days ㅡㅡ to synthesize the full sentences of LibriTTS-test subsets. Even, the audio quality is so so so s oso bad. I hope they will release their official source code soon. 
 
 In my very personal opinion, VITS is still the best TTS model I have ever seen. But, I acknowledge that LLM-based models have much powerful potential for their creative generative performance from the large-scale dataset but not now.
 
 ## Limitation of our work
-- Slow training speed and Relatively large model size (Compared with VITS) --> Future work: Light-weight and Fast training pipeline
+- Slow training speed and Relatively large model size (Compared with VITS) --> Future work: Much larger model????, Light-weight and Fast training pipeline
 - Could not generate realistic background sound --> Future work: adding audio generation part by disentangling speech and sound. 
 
 ## Reference
