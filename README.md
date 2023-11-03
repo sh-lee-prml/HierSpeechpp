@@ -133,7 +133,6 @@ In my very personal opinion, VITS is still the best TTS model I have ever seen. 
   
 ### Baseline Model
 - VITS: https://github.com/jaywalnut310/vits
-- Period VITS: https://ieeexplore.ieee.org/abstract/document/10096480
 - NaturalSpeech: 
 - NANSY for Audio Perturbation: https://github.com/revsic/torch-nansy
 - Speech Resynthesis: https://github.com/facebookresearch/speech-resynthesis
@@ -155,5 +154,11 @@ In my very personal opinion, VITS is still the best TTS model I have ever seen. 
 - NaturalSpeech 2: 
 - Make-a-Voice:
 - MEGA-TTS & MEGA-TTS 2:
-<!--
-Although there are some recent works utilizing hierarchical speech synthesis frameworks using self-supervised speech representation, it is worth noting that HierSpeech [NeurIPS2022] is the first hierarchical speech synthesis models using self-supervised speech representation.-->
+
+### Other TTS paper
+- Tacotron2:
+- FastSpeech:
+- Glow-TTS:
+- WaveNet:
+
+Thanks for all nice works. 
