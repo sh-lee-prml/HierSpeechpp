@@ -72,7 +72,7 @@ This paper is an extenstion version of above papers.
 | Model |Sampling Rate|Params|Dataset |Checkpoint|
 |------|:---:|:---:|:---:|:---:|
 | SpeechSR-24k |16kHz --> 24 kHz|0.13M| LibriTTS (train-960), MMS (Kor) |-|
-| SpeechSR-48k |16kHz --> 48 kHz|0.13M| MMS (Kor), Singing (Kor), Expresso (Eng)|-|
+| SpeechSR-48k |16kHz --> 48 kHz|0.13M| MMS (Kor), Expresso (Eng), VCTK (Eng)|-|
 
 ## Voice Conversion
 - Todo
