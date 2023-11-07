@@ -47,8 +47,7 @@ This paper is an extenstion version of above papers.
 | Model |Sampling Rate|Params|Dataset|Hour|Speaker|Checkpoint|
 |------|:---:|:---:|:---:|:---:|:---:|:---:|
 | HierSpeech2|16 kHz|97M| LibriTTS (train-960) |555|2,311|-|
-| HierSpeech2|16 kHz|97M| LibriTTS (train-960), Libri-light (Small, Medium), Expresso, MMS(Kor), NIKL(Kor)|20k| 10,000 |60 epochs
-(Paper ver.)|
+| HierSpeech2|16 kHz|97M| LibriTTS (train-960), Libri-light (Small, Medium), Expresso, MMS(Kor), NIKL(Kor)|20k| 10,000 |60 epochs(Paper ver.)|
 | HierSpeech2|16 kHz|97M| LibriTTS (train-960), Libri-light (Small, Medium), Expresso, MMS(Kor), NIKL(Kor)|20k| 10,000 |120 epochs|
 
 <!--
