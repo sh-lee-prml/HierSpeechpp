@@ -162,6 +162,7 @@ In my very personal opinion, VITS is still the best TTS model I have ever seen. 
 - NaturalSpeech 2: 
 - Make-a-Voice:
 - MEGA-TTS & MEGA-TTS 2:
+- UniAudio: 
 
 ### Other TTS paper
 - Tacotron2:
