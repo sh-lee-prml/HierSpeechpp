@@ -1,5 +1,5 @@
 # HierSpeech2: Bridging the Gap between Semantic and Acoustic Representation by Hierarchical Variational Inference for Zero-shot Speech Synthesis
-The official implementation of HierSpeech2 | [Paper]() | [Demo page]()
+The official implementation of HierSpeech2 | [Paper]() | [Demo page]() | [Huggingface]()
 
 <!--
 # HierSpeech3: Bridging the Gap between Text Prompt and Style Representation by Hierarchical Style Prompt Modeling for Zero-shot Voice and Prosody Generation
