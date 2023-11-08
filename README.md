@@ -50,7 +50,7 @@ This paper is an extenstion version of above papers.
 ### Speech Super-resolution (16k --> 24k or 48k) 
 - [x] SpeechSR-24k
 - [x] SpeechSR-48k
-### Training code (Will be released after paper acceptance
+### Training code (Will be released after paper acceptance)
 - [ ] TTV
 - [ ] Hierarchical Speech Synthesizer
 - [ ] SpeechSR
