@@ -132,6 +132,9 @@ In my very personal opinion, VITS is still the best TTS model I have ever seen. 
 - Slow training speed and Relatively large model size (Compared with VITS) --> Future work: Much larger model????, Light-weight and Fast training pipeline
 - Could not generate realistic background sound --> Future work: adding audio generation part by disentangling speech and sound. 
 
+## Results
+We have attached all samples from LibriTTS test-clean and test-other. [Download](https://drive.google.com/drive/folders/1xCrZQy9s5MT38RMQxKAtkoWUgxT5qYYW?usp=sharing)
+
 ## Reference
 ### Our Previous Works
 - HierSpeech/HierSpeech-U for Hierarchical Speech Synthesis Framework: https://openreview.net/forum?id=awdyRVnfQKX
