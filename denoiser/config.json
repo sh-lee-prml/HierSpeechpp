@@ -1,0 +1,28 @@
+{
+    "num_gpus": 0,
+    "batch_size": 4,
+    "learning_rate": 0.0005,
+    "adam_b1": 0.8,
+    "adam_b2": 0.99,
+    "lr_decay": 0.99,
+    "seed": 1234,
+    
+    "dense_channel": 64,
+    "compress_factor": 0.3, 
+    "num_tsconformers": 4,
+    "beta": 2.0,
+
+    "sampling_rate": 16000,
+    "segment_size": 32000,
+    "n_fft": 400,
+    "hop_size": 100,
+    "win_size": 400,
+
+    "num_workers": 4,
+
+    "dist_config": {
+        "dist_backend": "nccl",
+        "dist_url": "tcp://localhost:54321",
+        "world_size": 1
+    }
+}
