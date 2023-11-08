@@ -126,10 +126,11 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
 ```
 # without denoiser
 --denoise_ratio "0"
-# Mixup (Recommended 0.6~0.8)
---denoise_rate "0.8" 
 # with denoiser
 --denoise_ratio "1"
+# Mixup (Recommended 0.6~0.8)
+--denoise_rate "0.8" 
+
 
 ```
 ## Speech Super-resolution
