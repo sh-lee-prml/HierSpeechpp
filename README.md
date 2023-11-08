@@ -73,15 +73,16 @@ This paper is an extenstion version of above papers.
 ### SpeechSR
 | Model |Sampling Rate|Params|Dataset |Checkpoint|
 |------|:---:|:---:|:---:|:---:|
-| SpeechSR-24k |16kHz --> 24 kHz|0.13M| LibriTTS (train-960), MMS (Kor) |-|
-| SpeechSR-48k |16kHz --> 48 kHz|0.13M| MMS (Kor), Expresso (Eng), VCTK (Eng)|-|
+| SpeechSR-24k |16kHz --> 24 kHz|0.13M| LibriTTS (train-960), MMS (Kor) |speechsr24k|
+| SpeechSR-48k |16kHz --> 48 kHz|0.13M| MMS (Kor), Expresso (Eng), VCTK (Eng)|speechsr48k|
 
 ## Voice Conversion
 - Todo
 - 
 ## Text-to-Speech
-- Todo
-- 
+```
+sh inference.sh
+```  
 ## Speech Super-resolution
 - Todo
 
