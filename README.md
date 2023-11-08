@@ -97,7 +97,7 @@ sh inference.sh
 # --ckpt "logs/hierspeechpp_libritts460/G_460000.pth" \ LibriTTS-460
 # --ckpt "logs/hierspeechpp_libritts960/G_1230000.pth" \ LibriTTS-960
 # --ckpt "logs/hierspeechpp_eng_kor/G_720000.pth" \ Large_v1
-# --ckpt "logs/hierspeechpp_eng_kor/G_1340000.pth" \ Large_v2
+# --ckpt "logs/hierspeechpp_eng_kor/G_1380000.pth" \ Large_v2
 
 CUDA_VISIBLE_DEVICES=0 python3 inference.py \
                 --ckpt "logs/hierspeechpp_eng_kor/G_1380000.pth" \
