@@ -4,6 +4,7 @@ The official implementation of HierSpeech2 | [Paper]() | [Demo page]() |
 **Sang-Hoon Lee, Ha-Yeong Choi, Seung-Bin Kim, Seong-Whan Lee**
 
  Department of Artificial Intelligence, Korea University, Seoul, Korea  
+[Fig1_pipeline.pdf](https://github.com/sh-lee-prml/HierSpeechpp/files/13294541/Fig1_pipeline.pdf)
 
 ## Abstract
 <details> 
