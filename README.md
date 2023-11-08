@@ -215,13 +215,6 @@ We have attached all samples from LibriTTS test-clean and test-other.
 - MEGA-TTS & MEGA-TTS 2
 - UniAudio
 
-### Other TTS paper
-- Tacotron2
-- FastSpeech
-- Glow-TTS
-- WaveNet
-
 ### AdaIN-zero
 - Dit: https://github.com/facebookresearch/DiT
-- 
 Thanks for all nice works. 
