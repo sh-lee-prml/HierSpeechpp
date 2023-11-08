@@ -121,7 +121,17 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
                 --noise_scale_ttv "0.333" \
                 --denoise_ratio "0"
 
-```  
+```
+### Noise Control 
+```
+# without denoiser
+--denoise_ratio "0"
+# Mixup (Recommended 0.6~0.8)
+--denoise_rate "0.8" 
+# with denoiser
+--denoise_ratio "1"
+
+```
 ## Speech Super-resolution
 - SpeechSR-24k and SpeechSR-48 are provided in TTS pipeline. If you want to use SpeechSR only, please refer [SpeechSR repository]().
 
