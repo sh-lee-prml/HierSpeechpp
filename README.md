@@ -33,7 +33,7 @@ This paper is an extenstion version of above papers.
 
 ## Todo
 ### Hierarchical Speech Synthesizer
-- [x] HierSpeech2-Backbone
+- [x] HierSpeechpp-Backbone
 <!--
 - [ ] HierSpeech-Lite (Fast and Efficient Zero-shot Speech Synthesizer)
 - [ ] HierSinger (Zero-shot Singing Voice Synthesizer)
