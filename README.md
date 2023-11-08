@@ -43,13 +43,13 @@ This paper is an extenstion version of above papers.
 
 ### Pre-requisites
 
-## Checkpoint
+## Checkpoint [[Download]](https://drive.google.com/drive/folders/1-L_90BlCkbPyKWWHTUjt5Fsu3kz0du0w?usp=sharing)
 ### Hierarchical Speech Synthesizer
 | Model |Sampling Rate|Params|Dataset|Hour|Speaker|Checkpoint|
 |------|:---:|:---:|:---:|:---:|:---:|:---:|
-| HierSpeech2|16 kHz|97M| LibriTTS (train-960) |555|2,311|-|
-| HierSpeech2|16 kHz|97M| LibriTTS (train-960), Libri-light (Small, Medium), Expresso, MMS(Kor), NIKL(Kor)|20k| 10,000 |60 epochs(Paper ver.)|
-| HierSpeech2|16 kHz|97M| LibriTTS (train-960), Libri-light (Small, Medium), Expresso, MMS(Kor), NIKL(Kor)|20k| 10,000 |120 epochs|
+| HierSpeech2|16 kHz|97M| LibriTTS (train-460) |555|2,311|[[Download]](https://drive.google.com/drive/folders/14FTu0ZWux0zAD7ev4O1l6lKslQcdmebL?usp=sharing)|
+| HierSpeech2|16 kHz|97M| LibriTTS (train-960) |555|2,311|[[Download]](https://drive.google.com/drive/folders/1sFQP-8iS8z9ofCkE7szXNM_JEy4nKg41?usp=drive_link)|
+| HierSpeech2|16 kHz|97M| LibriTTS (train-960), Libri-light (Small, Medium), Expresso, MMS(Kor), NIKL(Kor)|20k| 10,000 |[[Download]](https://drive.google.com/drive/folders/14jaDUBgrjVA7bCODJqAEirDwRlvJe272?usp=drive_link)|
 
 <!--
 | HierSpeech2-Lite|16 kHz|-| LibriTTS (train-960))  |-|
@@ -60,10 +60,11 @@ This paper is an extenstion version of above papers.
 ### TTV
 | Model |Language|Params|Dataset|Hour|Speaker|Checkpoint|
 |------|:---:|:---:|:---:|:---:|:---:|:---:|
-| TTV |Eng|100M| LibriTTS (train-960) |555|2,311|-|
-| TTV |Kor|100M| NIKL |114|118|-|
+| TTV |Eng|100M| LibriTTS (train-960) |555|2,311|[[Download]](https://drive.google.com/drive/folders/1QiFFdPhqhiLFo8VXc0x7cFHKXArx7Xza?usp=drive_link)|
+
 
 <!--
+| TTV |Kor|100M| NIKL |114|118|-|
 | TTV |Eng|50M| LibriTTS (train-960) |555|2,311|-|
 | TTV-Large |Eng|100M| LibriTTS (train-960) |555|2,311|-|
 | TTV-Lite |Eng|10M| LibriTTS (train-960) |555|2,311|-|
