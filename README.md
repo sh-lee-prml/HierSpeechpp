@@ -54,6 +54,12 @@ This paper is an extenstion version of above papers.
 
 ### Pre-requisites
 0. Pytorch >=1.13 and torchaudio >= 0.13
+1. Install requirements
+2. Install Phonemizer
+```
+pip install phonemizer
+sudo apt-get install espeak-ng
+```
    
 ## Checkpoint [[Download]](https://drive.google.com/drive/folders/1-L_90BlCkbPyKWWHTUjt5Fsu3kz0du0w?usp=sharing)
 ### Hierarchical Speech Synthesizer
