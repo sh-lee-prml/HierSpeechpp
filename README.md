@@ -16,9 +16,9 @@ Recently, large-scale language models (LLM)-based speech synthesis has shown a s
 
 This repository contains:
 
-🪐 A PyTorch implementation of HierSpeech++ (TTV, Hierarchical Speech Synthesizer, SpeechSR)
-⚡️ Pre-trained HierSpeech++ models trained on LibriTTS (Train-460, Train-960, and more dataset)
-💥 A Colab notebook for running pre-trained HierSpeech++ models
+- 🪐 A PyTorch implementation of HierSpeech++ (TTV, Hierarchical Speech Synthesizer, SpeechSR)
+- ⚡️ Pre-trained HierSpeech++ models trained on LibriTTS (Train-460, Train-960, and more dataset)
+- 💥 A Colab notebook for running pre-trained HierSpeech++ models
 <!--
 🛸 A HierSpeech++ training script (Will be released soon)
 -->
