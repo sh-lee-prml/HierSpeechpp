@@ -151,7 +151,6 @@ We think that we could not confirm which is better yet. There are many advatange
 ### (Our other works) Diffusion-based Mel-spectrogram Generation Models
 - DDDM-VC: Disentangled Denoising Diffusion Models for High-quality and High-diversity Speech Synthesis Models
 - Diff-hierVC: Hierarhical Diffusion-based Speech Synthesis Model with Diffusion-based Pitch Modeling
-- SDT: Efficient Speech Diffusion Transformer Models
 
 ### Our Goals
 - Integrating each model for High-quality, High-diversity and High-fidelity Speech Synthesis Models 
@@ -175,12 +174,10 @@ We have attached all samples from LibriTTS test-clean and test-other.
 - HierVST for Baseline Speech Backbone: https://www.isca-speech.org/archive/interspeech_2023/lee23i_interspeech.html
 - DDDM-VC: https://dddm-vc.github.io/
 - Diff-HierVC: https://diff-hiervc.github.io/
-- SDT: https://sdt.github.io/
-
   
 ### Baseline Model
 - VITS: https://github.com/jaywalnut310/vits
-- NaturalSpeech: 
+- NaturalSpeech 
 - NANSY for Audio Perturbation: https://github.com/revsic/torch-nansy
 - Speech Resynthesis: https://github.com/facebookresearch/speech-resynthesis
   
@@ -196,19 +193,20 @@ We have attached all samples from LibriTTS test-clean and test-other.
 - MMS: https://huggingface.co/facebook/facebook/mms-300m
 
 ### Other Large Language Model based Speech Synthesis Model
-- VALL-E & VALL-E-X:
-- SPEAR-TTS:
-- NaturalSpeech 2: 
-- Make-a-Voice:
-- MEGA-TTS & MEGA-TTS 2:
-- UniAudio: 
+- VALL-E & VALL-E-X
+- SPEAR-TTS
+- NaturalSpeech 2
+- Make-a-Voice
+- MEGA-TTS & MEGA-TTS 2
+- UniAudio
 
 ### Other TTS paper
-- Tacotron2:
-- FastSpeech:
-- Glow-TTS:
-- WaveNet:
+- Tacotron2
+- FastSpeech
+- Glow-TTS
+- WaveNet
 
 ### AdaIN-zero
 - Dit: https://github.com/facebookresearch/DiT
+- 
 Thanks for all nice works. 
