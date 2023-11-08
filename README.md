@@ -55,6 +55,9 @@ This paper is an extenstion version of above papers.
 ### Pre-requisites
 0. Pytorch >=1.13 and torchaudio >= 0.13
 1. Install requirements
+```
+pip install -r requirements.txt
+```
 2. Install Phonemizer
 ```
 pip install phonemizer
