@@ -185,4 +185,6 @@ We have attached all samples from LibriTTS test-clean and test-other.
 - Glow-TTS:
 - WaveNet:
 
+### AdaIN-zero
+- Dit: https://github.com/facebookresearch/DiT
 Thanks for all nice works. 
