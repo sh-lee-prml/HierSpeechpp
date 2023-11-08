@@ -84,13 +84,16 @@ This paper is an extenstion version of above papers.
 sh inference.sh
 ```  
 ## Speech Super-resolution
-- Todo
+- SpeechSR-24k and SpeechSR-48 are provided in TTS pipeline. If you want to use SpeechSR only, please refer [SpeechSR repository]().
 
 ## Speech Denoising for Noise-free Speech Synthesis (Only used in Speaker Encoder during Inference)
-- Todo
+- For denoised style prompt, we utilize a denoiser [(MP-SENet)](https://github.com/yxlu-0102/MP-SENet).
+- When using a long reference audio, there is an out-of-memory issue with this model so we have a plan to learn a memory efficient speech denoiser in the future.
+- If you have a problem, we recommend to use a clean reference audio or denoised audio before TTS pipeline or denoise the audio with cpu (but this will be slow😥). 
 
 ## GAN VS Diffusion
-
+<details> 
+<summary> [Read Moro] </summary>
 We think that we could not confirm which is better yet. There are many advatanges for each model so you can utilize each model for your own purposes and each study must be actively conducted simultaneously.  
 
 ### GAN (Specifically, GAN-based End-to-End Speech Synthesis Models)
@@ -117,7 +120,7 @@ We think that we could not confirm which is better yet. There are many advatange
 
 ### Our Goals
 - Integrating each model for High-quality, High-diversity and High-fidelity Speech Synthesis Models 
-
+</details> 
 ## LLM-based Models
 We hope to compare LLM-based models for zero-shot TTS baselines. However, there is no public-available official implementation of LLM-based TTS models. Unfortunately, unofficial models have a poor performance in zero-shot TTS so we hope they will release their model for a fair comparison and reproducibility and for our speech community. THB I could not tolerate the inference speed of unofficial models above 2,000 times slower than e2e models It takes 5 days ㅡㅡ to synthesize the full sentences of LibriTTS-test subsets. Even, the audio quality is so so so s oso bad. I hope they will release their official source code soon. 
 
