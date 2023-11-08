@@ -53,7 +53,8 @@ This paper is an extenstion version of above papers.
 ## Getting Started
 
 ### Pre-requisites
-
+0. Pytorch >=1.13 and torchaudio >= 0.13
+   
 ## Checkpoint [[Download]](https://drive.google.com/drive/folders/1-L_90BlCkbPyKWWHTUjt5Fsu3kz0du0w?usp=sharing)
 ### Hierarchical Speech Synthesizer
 | Model |Sampling Rate|Params|Dataset|Hour|Speaker|Checkpoint|
