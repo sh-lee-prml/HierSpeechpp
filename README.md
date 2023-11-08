@@ -177,7 +177,7 @@ We hope to compare LLM-based models for zero-shot TTS baselines. However, there 
 In my very personal opinion, VITS is still the best TTS model I have ever seen. But, I acknowledge that LLM-based models have much powerful potential for their creative generative performance from the large-scale dataset but not now.
 
 ## Limitation of our work
-- Slow training speed and Relatively large model size (Compared with VITS) --> Future work: Much larger model????, Light-weight and Fast training pipeline
+- Slow training speed and Relatively large model size (Compared with VITS) --> Future work: Light-weight and Fast training pipeline and much larger model...
 - Could not generate realistic background sound --> Future work: adding audio generation part by disentangling speech and sound. 
 
 ## Results [[Download]](https://drive.google.com/drive/folders/1xCrZQy9s5MT38RMQxKAtkoWUgxT5qYYW?usp=sharing)
