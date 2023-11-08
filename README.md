@@ -121,8 +121,9 @@ We think that we could not confirm which is better yet. There are many advatange
 ### Our Goals
 - Integrating each model for High-quality, High-diversity and High-fidelity Speech Synthesis Models 
 </details> 
+
 ## LLM-based Models
-We hope to compare LLM-based models for zero-shot TTS baselines. However, there is no public-available official implementation of LLM-based TTS models. Unfortunately, unofficial models have a poor performance in zero-shot TTS so we hope they will release their model for a fair comparison and reproducibility and for our speech community. THB I could not tolerate the inference speed of unofficial models above 2,000 times slower than e2e models It takes 5 days ㅡㅡ to synthesize the full sentences of LibriTTS-test subsets. Even, the audio quality is so so so s oso bad. I hope they will release their official source code soon. 
+We hope to compare LLM-based models for zero-shot TTS baselines. However, there is no public-available official implementation of LLM-based TTS models. Unfortunately, unofficial models have a poor performance in zero-shot TTS so we hope they will release their model for a fair comparison and reproducibility and for our speech community. THB I could not tolerate the inference speed of unofficial models above 2,000 times slower than e2e models It takes 5 days to synthesize the full sentences of LibriTTS-test subsets. Even, the audio quality is so bad. I hope they will release their official source code soon. 
 
 In my very personal opinion, VITS is still the best TTS model I have ever seen. But, I acknowledge that LLM-based models have much powerful potential for their creative generative performance from the large-scale dataset but not now.
 
