@@ -21,7 +21,7 @@ This paper is an extenstion version of above papers.
 
 ## Todo
 ### Hierarchical Speech Synthesizer
-- [ ] HierSpeech2-Backbone
+- [x] HierSpeech2-Backbone
 <!--
 - [ ] HierSpeech-Lite (Fast and Efficient Zero-shot Speech Synthesizer)
 - [ ] HierSinger (Zero-shot Singing Voice Synthesizer)
@@ -29,15 +29,15 @@ This paper is an extenstion version of above papers.
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
 -->
 ### Text-to-Vec (TTV)
-- [ ] Text-to-Vec (LibriTTS-train-960)
+- [x] Text-to-Vec (LibriTTS-train-960)
 - [ ] Multi-lingual Text-to-Vec (Will be released in Dec. 2023)
 - [ ] Korean TTV (Will be released in 2024)
 <!--
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 -->
 ### Speech Super-resolution (16k --> 24k or 48k) 
-- [ ] SpeechSR-24k
-- [ ] SpeechSR-48k
+- [x] SpeechSR-24k
+- [x] SpeechSR-48k
 
 ## Getting Started
 
