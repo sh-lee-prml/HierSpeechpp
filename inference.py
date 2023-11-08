@@ -1,12 +1,7 @@
 import os
 import torch
 import argparse
-import json
-from glob import glob
-import tqdm
 import numpy as np
-from torch.nn import functional as F
-
 from scipy.io.wavfile import write
 import torchaudio
 import utils
@@ -53,6 +48,7 @@ def add_blank_token(text):
     return text_norm
 
 def tts(text, a, hierspeech):
+    
     net_g, text2w2v, audiosr, denoiser, mel_fn = hierspeech
 
     os.makedirs(a.output_dir, exist_ok=True)
@@ -76,7 +72,6 @@ def tts(text, a, hierspeech):
     p = (ori_prompt_len // 1600 + 1) * 1600 - ori_prompt_len
     audio = torch.nn.functional.pad(audio, (0, p), mode='constant').data
 
-
     file_name = os.path.splitext(os.path.basename(a.input_prompt))[0]
 
     # If you have a memory issue during denosing the prompt, try to denoise the prompt with cpu before TTS 
@@ -84,7 +79,8 @@ def tts(text, a, hierspeech):
     if a.denoise_ratio == 0:
         audio = torch.cat([audio.cuda(), audio.cuda()], dim=0)
     else:
-        denoised_audio = denoise(audio.squeeze(0).cuda(), denoiser, hps_denoiser)
+        with torch.no_grad():
+            denoised_audio = denoise(audio.squeeze(0).cuda(), denoiser, hps_denoiser)
         audio = torch.cat([audio.cuda(), denoised_audio[:,:audio.shape[-1]]], dim=0)
 
     
@@ -96,20 +92,21 @@ def tts(text, a, hierspeech):
     src_length2 = torch.cat([src_length,src_length], dim=0)
 
     ## TTV (Text --> W2V, F0)
-    w2v_x, pitch = text2w2v.infer_noise_control(token, token_length, src_mel, src_length2, noise_scale=a.noise_scale_ttv, denoise_ratio=a.denoise_ratio)
+    with torch.no_grad():
+        w2v_x, pitch = text2w2v.infer_noise_control(token, token_length, src_mel, src_length2, noise_scale=a.noise_scale_ttv, denoise_ratio=a.denoise_ratio)
    
-    src_length = torch.LongTensor([w2v_x.size(2)]).cuda()  
-    
-    ## Pitch Clipping
-    pitch[pitch<torch.log(torch.tensor([55]).cuda())]  = 0
+        src_length = torch.LongTensor([w2v_x.size(2)]).cuda()  
+        
+        ## Pitch Clipping
+        pitch[pitch<torch.log(torch.tensor([55]).cuda())]  = 0
 
-    ## Hierarchical Speech Synthesizer (W2V, F0 --> 16k Audio)
-    converted_audio = \
-        net_g.voice_conversion_noise_control(w2v_x, src_length, src_mel, src_length2, pitch, noise_scale=a.noise_scale_vc, denoise_ratio=a.denoise_ratio)
-            
-    ## SpeechSR (Optional) (16k Audio --> 24k or 48k Audio)
-    if a.output_sr == 48000 or 24000:
-        converted_audio = audiosr(converted_audio)
+        ## Hierarchical Speech Synthesizer (W2V, F0 --> 16k Audio)
+        converted_audio = \
+            net_g.voice_conversion_noise_control(w2v_x, src_length, src_mel, src_length2, pitch, noise_scale=a.noise_scale_vc, denoise_ratio=a.denoise_ratio)
+                
+        ## SpeechSR (Optional) (16k Audio --> 24k or 48k Audio)
+        if a.output_sr == 48000 or 24000:
+            converted_audio = audiosr(converted_audio)
 
     converted_audio = converted_audio.squeeze()
     
@@ -145,15 +142,13 @@ def model_load(a):
     net_g = SynthesizerTrn(hps.data.filter_length // 2 + 1,
         hps.train.segment_size // hps.data.hop_length,
         **hps.model).cuda()
+    net_g.load_state_dict(torch.load(a.ckpt))
     _ = net_g.eval()
-    _ = utils.load_checkpoint(a.ckpt, net_g, None)
-    # net_g.dec.remove_weight_norm()
-    # net_g.sn.remove_weight_norm()
-    
+
     text2w2v = Text2W2V(hps.data.filter_length // 2 + 1,
     hps.train.segment_size // hps.data.hop_length,
     **hps_t2w2v.model).cuda()
-    utils.load_checkpoint(a.ckpt_text2w2v, text2w2v, None)
+    text2w2v.load_state_dict(torch.load(a.ckpt_text2w2v))
     text2w2v.eval()
 
     if a.output_sr == 48000:
@@ -162,13 +157,14 @@ def model_load(a):
             **h_sr48.model).cuda()
         utils.load_checkpoint(a.ckpt_sr48, audiosr, None)
         audiosr.eval()
+       
     elif a.output_sr == 24000:
         audiosr = AudioSR(h_sr.data.n_mel_channels,
         h_sr.train.segment_size // h_sr.data.hop_length,
         **h_sr.model).cuda()
         utils.load_checkpoint(a.ckpt_sr, audiosr, None)
         audiosr.eval()
-        # audiosr.dec.remove_weight_norm()
+      
     else:
         audiosr = None
     
@@ -184,8 +180,8 @@ def inference(a):
     # Input Text 
     text = load_text(a.input_txt)
     # text = "hello I'm hierspeech"
-    with torch.no_grad():
-        tts(text, a, hierspeech)
+    
+    tts(text, a, hierspeech)
 
 def main():
     print('Initializing Inference Process..')
@@ -194,10 +190,8 @@ def main():
     parser.add_argument('--input_prompt', default='example/reference_4.wav')
     parser.add_argument('--input_txt', default='example/reference_4.txt')
     parser.add_argument('--output_dir', default='output')
-    parser.add_argument('--ckpt', default='./logs/hierspeech/hierspeechpp_libritts460/G_460000.pth')
-    # parser.add_argument('--ckpt', default='./logs/hierspeech/hierspeechpp_libritts960/G_1230000.pth')
-    # parser.add_argument('--ckpt', default='./logs/hierspeech/hierspeechpp_eng_kor/G_720000.pth')
-    parser.add_argument('--ckpt_text2w2v', '-ct', help='text2w2v checkpoint path', default='./logs/ttv_libritts_v1/G_950000.pth')
+    parser.add_argument('--ckpt', default='./logs/hierspeechpp_eng_kor/hierspeechpp_v2_ckpt.pth')
+    parser.add_argument('--ckpt_text2w2v', '-ct', help='text2w2v checkpoint path', default='./logs/ttv_libritts_v1/ttv_lt960_ckpt.pth')
     parser.add_argument('--ckpt_sr', type=str, default='./speechsr24k/G_340000.pth')  
     parser.add_argument('--ckpt_sr48', type=str, default='./speechsr48k/G_100000.pth')  
     parser.add_argument('--denoiser_ckpt', type=str, default='denoiser/g_best')
