@@ -122,6 +122,9 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
                 --denoise_ratio "0"
 
 ```
+- For better robustness, we recommend a noise_scale of 0.333
+- For better expressiveness, we recommend a noise_scale of 0.667
+- Find your best parameters for your speech prompt 😵
 ### Noise Control 
 ```
 # without denoiser
