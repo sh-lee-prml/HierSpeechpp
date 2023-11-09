@@ -157,6 +157,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
 ```
 ## Speech Super-resolution
 - SpeechSR-24k and SpeechSR-48 are provided in TTS pipeline. If you want to use SpeechSR only, please refer inference_speechsr.py.
+- If you change the output resolution, add this
 ```
 --output_sr "48000" # Default
 --output_sr "24000" # 
