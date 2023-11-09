@@ -1,0 +1,14 @@
+Cython==3.0.3
+einops==0.7.0
+joblib==1.3.2
+matplotlib==3.8.1
+numpy==1.26.1
+pesq==0.0.4
+phonemizer==3.2.1
+scipy==1.11.3
+timm==0.6.13
+torch==1.13.1+cu117
+torchaudio==0.13.1+cu117
+tqdm==4.65.0
+transformers==4.34.0
+Unidecode==1.3.7
