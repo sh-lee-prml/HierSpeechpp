@@ -187,6 +187,8 @@ In my very personal opinion, VITS is still the best TTS model I have ever seen. 
 We have attached all samples from LibriTTS test-clean and test-other. 
 
 ## Reference
+<details> 
+<summary> [Read Moro] </summary>
 ### Our Previous Works
 - HierSpeech/HierSpeech-U for Hierarchical Speech Synthesis Framework: https://openreview.net/forum?id=awdyRVnfQKX
 - HierVST for Baseline Speech Backbone: https://www.isca-speech.org/archive/interspeech_2023/lee23i_interspeech.html
@@ -222,7 +224,7 @@ We have attached all samples from LibriTTS test-clean and test-other.
 - Dit: https://github.com/facebookresearch/DiT
   
 Thanks for all nice works. 
-
+</details>
 ### LICENSE
 - Code in this repo: MIT License
 - Model Weights: CC-BY-NC-2.0 license
