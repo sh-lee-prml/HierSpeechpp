@@ -225,6 +225,7 @@ We have attached all samples from LibriTTS test-clean and test-other.
   
 Thanks for all nice works. 
 </details>
-### LICENSE
+
+## LICENSE
 - Code in this repo: MIT License
 - Model Weights: CC-BY-NC-2.0 license
