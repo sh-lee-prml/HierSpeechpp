@@ -157,7 +157,11 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
 ```
 ## Speech Super-resolution
 - SpeechSR-24k and SpeechSR-48 are provided in TTS pipeline. If you want to use SpeechSR only, please refer inference_speechsr.py.
-
+```
+--output_sr "48000" # Default
+--output_sr "24000" # 
+--output_sr "16000" # without super-resolution.
+```
 ## Speech Denoising for Noise-free Speech Synthesis (Only used in Speaker Encoder during Inference)
 - For denoised style prompt, we utilize a denoiser [(MP-SENet)](https://github.com/yxlu-0102/MP-SENet).
 - When using a long reference audio, there is an out-of-memory issue with this model so we have a plan to learn a memory efficient speech denoiser in the future.
