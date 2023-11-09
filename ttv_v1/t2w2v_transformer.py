@@ -354,9 +354,6 @@ class SynthesizerTrn(nn.Module):
     resblock,
     resblock_kernel_sizes,
     resblock_dilation_sizes,
-    upsample_rates,
-    upsample_initial_channel,
-    upsample_kernel_sizes,
     gin_channels=256,
     prosody_size=20,
     cfg=False,
@@ -374,9 +371,6 @@ class SynthesizerTrn(nn.Module):
     self.resblock = resblock
     self.resblock_kernel_sizes = resblock_kernel_sizes
     self.resblock_dilation_sizes = resblock_dilation_sizes
-    self.upsample_rates = upsample_rates
-    self.upsample_initial_channel = upsample_initial_channel
-    self.upsample_kernel_sizes = upsample_kernel_sizes
     self.segment_size = segment_size
     self.mel_size = prosody_size
 
