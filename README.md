@@ -42,7 +42,7 @@ This paper is an extenstion version of above papers.
 -->
 ### Text-to-Vec (TTV)
 - [x] TTV-v1 (LibriTTS-train-960)
-- [ ] TTV-v2 (We are currently training an improved and larger TTV model for better prosody and multi-lingual TTS)  
+- [ ] TTV-v2 (We are currently training an improved and larger TTV model for better prosody modeling)  
 <!--
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 -->
