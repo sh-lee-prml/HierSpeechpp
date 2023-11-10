@@ -41,9 +41,8 @@ This paper is an extenstion version of above papers.
 - [ ] HierSpeech2-48k-Large-Full (For Industrial-level High-resolution and High-quality Speech Synthesizer)
 -->
 ### Text-to-Vec (TTV)
-- [x] Text-to-Vec (LibriTTS-train-960)
-- [ ] Multi-lingual Text-to-Vec (Will be released in Dec. 2023)
-- [ ] Korean TTV (Will be released in 2024)
+- [x] TTV-v1 (LibriTTS-train-960)
+- [ ] TTV-v2 (We are now training an improved and larger TTV model for better prosody and multi-lingual TTS)  
 <!--
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 -->
