@@ -174,7 +174,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
   2. Intermediate hidden size: 256 --> 384 (Model size: 107M --> 250M)
   3. Style encoder: 256/256 --> 512/384
   4. Loss masking for wav2vec reconstruction loss (I left out masking the loss for zero-padding sequences)
-  5. For long sentence generation, we finetune the model with full dataset without data filter (Decrease the learning rate to 2e-5 with batch size of 8 per gpus)    
+  5. For long sentence generation, we finetune the model with full LibriTTS-train dataset without data filter (Decrease the learning rate to 2e-5 with batch size of 8 per gpus)    
 
 
 ## GAN VS Diffusion
