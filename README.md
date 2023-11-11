@@ -167,6 +167,16 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
 - When using a long reference audio, there is an out-of-memory issue with this model so we have a plan to learn a memory efficient speech denoiser in the future.
 - If you have a problem, we recommend to use a clean reference audio or denoised audio before TTS pipeline or denoise the audio with cpu (but this will be slow😥). 
 
+## TTV-v2
+- TTV-v1 is a simple model which is very slightly modified from VITS. Although this simple TTV could synthesize a speech with high-quality and high speaker similarity, we thought that there is room for improvement in terms of expressiveness such as prosody modeling.
+- For TTV-v2, we modify some components and training process
+  1. Style conditioning method of text encoder: Add --> AdaIN-zero
+  2. Intermediate hidden size: 256 --> 384 (Model size: 107M --> 250M)
+  3. Style encoder: 256/256 --> 512/384
+  4. Loss masking for wav2vec reconstruction loss (I left out masking the loss for zero-padding sequences)
+  5. For long sentence generation, we finetune the model with full dataset without data filter (Decrease the learning rate to 2e-5 with batch size of 8 per gpus)    
+
+
 ## GAN VS Diffusion
 <details> 
 <summary> [Read Moro] </summary>
