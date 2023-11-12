@@ -216,7 +216,7 @@ In my very personal opinion, VITS is still the best TTS model I have ever seen. 
 ## Limitation of our work
 - Slow training speed and Relatively large model size (Compared with VITS) --> Future work: Light-weight and Fast training pipeline and much larger model...
 - Could not generate realistic background sound --> Future work: adding audio generation part by disentangling speech and sound.
-- Could not generate a speech from a too long sentence becauase of our training setting. We see increasing max length could improve the model performance. However, we do not have GPUs with 80 GB 😢 --> TTV v2 may reduce this issue significantly...!
+- Could not generate a speech from a too long sentence becauase of our training setting. We see increasing max length could improve the model performance. However, we do not have GPUs with 80 GB 😢 
   ```
    # Data Filtering for limited computation resource. 
     wav_min = 32
@@ -224,7 +224,7 @@ In my very personal opinion, VITS is still the best TTS model I have ever seen. 
     text_min = 1
     text_max = 200
   ```
-
+--> TTV v2 may reduce this issue significantly...!
 
 ## Results [[Download]](https://drive.google.com/drive/folders/1xCrZQy9s5MT38RMQxKAtkoWUgxT5qYYW?usp=sharing)
 We have attached all samples from LibriTTS test-clean and test-other. 
