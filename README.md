@@ -129,7 +129,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
 --denoise_ratio "1"
 # Mixup (Recommended 0.6~0.8)
 --denoise_rate "0.8" 
-
+```
 ## Voice Conversion (Method 1: Paper Version for only timbre conversion)
 ```
 sh inference_vc.sh
@@ -172,7 +172,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc_v2.py \
 ```
 - We found that this 2-stage VC pipeline could change the prosody of speech and could improve the entire VC performance.
 
-```
+
 ## Speech Super-resolution
 - SpeechSR-24k and SpeechSR-48 are provided in TTS pipeline. If you want to use SpeechSR only, please refer inference_speechsr.py.
 - If you change the output resolution, add this
