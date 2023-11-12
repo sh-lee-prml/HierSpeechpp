@@ -271,4 +271,4 @@ Thanks for all nice works.
 
 ## LICENSE
 - Code in this repo: MIT License
-- Model Weights: CC-BY-NC-4.0 license (We utilize a public-available dataset, however, some have the CC-BY-NC-4.0 license.)  
+- Model Weights: CC-BY-NC-4.0 license (We utilize a public-available dataset, however, some datasets are distributed under the CC BY-NC 4.0 license.)  
