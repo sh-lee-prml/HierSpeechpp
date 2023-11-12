@@ -100,7 +100,7 @@ sudo apt-get install espeak-ng
 | SpeechSR-24k |16kHz --> 24 kHz|0.13M| LibriTTS (train-960), MMS (Kor) |[speechsr24k](https://github.com/sh-lee-prml/HierSpeechpp/blob/main/speechsr24k/G_340000.pth)|
 | SpeechSR-48k |16kHz --> 48 kHz|0.13M| MMS (Kor), Expresso (Eng), VCTK (Eng)|[speechsr48k](https://github.com/sh-lee-prml/HierSpeechpp/blob/main/speechsr48k/G_100000.pth)|
 
-## Voice Conversion
+## Voice Conversion (Method 1: Paper Version for only timbre conversion)
 ```
 sh inference_vc.sh
 
@@ -121,6 +121,26 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc.py \
 - Find your best parameters for your style prompt 😵
 - Voice Conversion is vulnerable to noisy target prompt so we recommend to utilize a denoiser with noisy prompt
 - For noisy source speech, a wrong F0 may be extracted by YAPPT resulting in a quality degradation. 
+
+## Voice Conversion (Method 2: 2-Stage Voice Conversion for timbre and *prosody* conversion)
+1. Stage1-TTV: W2V (From source speech) --> Posterior (w. Source Style) --> Flow (w. Source Style) --> Flow^{-1} (w. Target Style) --> Decoder (w. Target Style) --> W2V, F0
+2. Stage2-Hierarchical Speech Synthesizer
+```
+sh inference_vc.sh
+
+# --ckpt "logs/hierspeechpp_libritts460/hierspeechpp_lt460_ckpt.pth" \ LibriTTS-460
+# --ckpt "logs/hierspeechpp_libritts960/hierspeechpp_lt960_ckpt.pth" \ LibriTTS-960
+# --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v1_ckpt.pth" \ Large_v1 epoch 60 (paper version)
+# --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v2_ckpt.pth" \ Large_v2 epoch 110 (08. Nov. 2023)
+
+CUDA_VISIBLE_DEVICES=0 python3 inference_vc_v2.py \
+                --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v2_ckpt.pth" \
+                --output_dir "vc_results_eng_kor_v2" \
+                --noise_scale_vc "0.333" \
+                --noise_scale_ttv "0.333" \
+                --denoise_ratio "0"
+```
+- We found that this 2-stage VC pipeline could change the prosody of speech and could improve the entire VC performance.
 
 ## Text-to-Speech
 ```
