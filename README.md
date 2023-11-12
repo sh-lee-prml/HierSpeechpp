@@ -100,6 +100,28 @@ sudo apt-get install espeak-ng
 | SpeechSR-24k |16kHz --> 24 kHz|0.13M| LibriTTS (train-960), MMS (Kor) |[speechsr24k](https://github.com/sh-lee-prml/HierSpeechpp/blob/main/speechsr24k/G_340000.pth)|
 | SpeechSR-48k |16kHz --> 48 kHz|0.13M| MMS (Kor), Expresso (Eng), VCTK (Eng)|[speechsr48k](https://github.com/sh-lee-prml/HierSpeechpp/blob/main/speechsr48k/G_100000.pth)|
 
+## Text-to-Speech
+```
+sh inference.sh
+
+# --ckpt "logs/hierspeechpp_libritts460/hierspeechpp_lt460_ckpt.pth" \ LibriTTS-460
+# --ckpt "logs/hierspeechpp_libritts960/hierspeechpp_lt960_ckpt.pth" \ LibriTTS-960
+# --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v1_ckpt.pth" \ Large_v1 epoch 60 (paper version)
+# --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v2_ckpt.pth" \ Large_v2 epoch 110 (08. Nov. 2023)
+
+CUDA_VISIBLE_DEVICES=0 python3 inference.py \
+                --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v2_ckpt.pth" \
+                --ckpt_text2w2v "logs/ttv_libritts_v1/ttv_lt960_ckpt.pth" \
+                --output_dir "tts_results_eng_kor_v2" \
+                --noise_scale_vc "0.333" \
+                --noise_scale_ttv "0.333" \
+                --denoise_ratio "0"
+
+```
+- For better robustness, we recommend a noise_scale of 0.333
+- For better expressiveness, we recommend a noise_scale of 0.667
+- Find your best parameters for your style prompt 😵
+
 ## Voice Conversion (Method 1: Paper Version for only timbre conversion)
 ```
 sh inference_vc.sh
@@ -142,27 +164,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc_v2.py \
 ```
 - We found that this 2-stage VC pipeline could change the prosody of speech and could improve the entire VC performance.
 
-## Text-to-Speech
-```
-sh inference.sh
 
-# --ckpt "logs/hierspeechpp_libritts460/hierspeechpp_lt460_ckpt.pth" \ LibriTTS-460
-# --ckpt "logs/hierspeechpp_libritts960/hierspeechpp_lt960_ckpt.pth" \ LibriTTS-960
-# --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v1_ckpt.pth" \ Large_v1 epoch 60 (paper version)
-# --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v2_ckpt.pth" \ Large_v2 epoch 110 (08. Nov. 2023)
-
-CUDA_VISIBLE_DEVICES=0 python3 inference.py \
-                --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v2_ckpt.pth" \
-                --ckpt_text2w2v "logs/ttv_libritts_v1/ttv_lt960_ckpt.pth" \
-                --output_dir "tts_results_eng_kor_v2" \
-                --noise_scale_vc "0.333" \
-                --noise_scale_ttv "0.333" \
-                --denoise_ratio "0"
-
-```
-- For better robustness, we recommend a noise_scale of 0.333
-- For better expressiveness, we recommend a noise_scale of 0.667
-- Find your best parameters for your style prompt 😵
 ### Noise Control 
 ```
 # without denoiser
