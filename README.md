@@ -121,6 +121,14 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
 - For better robustness, we recommend a noise_scale of 0.333
 - For better expressiveness, we recommend a noise_scale of 0.667
 - Find your best parameters for your style prompt 😵
+### Noise Control 
+```
+# without denoiser
+--denoise_ratio "0"
+# with denoiser
+--denoise_ratio "1"
+# Mixup (Recommended 0.6~0.8)
+--denoise_rate "0.8" 
 
 ## Voice Conversion (Method 1: Paper Version for only timbre conversion)
 ```
@@ -163,17 +171,6 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc_v2.py \
                 --denoise_ratio "0"
 ```
 - We found that this 2-stage VC pipeline could change the prosody of speech and could improve the entire VC performance.
-
-
-### Noise Control 
-```
-# without denoiser
---denoise_ratio "0"
-# with denoiser
---denoise_ratio "1"
-# Mixup (Recommended 0.6~0.8)
---denoise_rate "0.8" 
-
 
 ```
 ## Speech Super-resolution
