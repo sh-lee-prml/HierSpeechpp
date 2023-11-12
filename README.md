@@ -171,7 +171,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc_v2.py \
                 --denoise_ratio "0"
 ```
 - We found that this 2-stage VC pipeline could change the prosody of speech and could improve the entire VC performance.
-
+- In addition, this method has better robustness because of utilizing pitch prediction with target style, not pitch extraction algorithm.
 
 ## Speech Super-resolution
 - SpeechSR-24k and SpeechSR-48 are provided in TTS pipeline. If you want to use SpeechSR only, please refer inference_speechsr.py.
