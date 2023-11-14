@@ -197,7 +197,6 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc_v2.py \
   3. Loss masking for wav2vec reconstruction loss (I left out masking the loss for zero-padding sequences😥)
   4. For long sentence generation, we finetune the model with full LibriTTS-train dataset without data filtering (Decrease the learning rate to 2e-5 with batch size of 8 per gpus)    
 
-
 ## GAN VS Diffusion
 <details> 
 <summary> [Read Moro] </summary>
@@ -284,7 +283,7 @@ We have attached all samples from LibriTTS test-clean and test-other.
 - MEGA-TTS & MEGA-TTS 2
 - UniAudio
 
-### AdaIN-zero
+### AdaLN-zero
 - Dit: https://github.com/facebookresearch/DiT
   
 Thanks for all nice works. 
