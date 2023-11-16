@@ -151,7 +151,8 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc.py \
 - For better expressiveness, we recommend a noise_scale of 0.667
 - Find your best parameters for your style prompt 😵
 - Voice Conversion is vulnerable to noisy target prompt so we recommend to utilize a denoiser with noisy prompt
-- For noisy source speech, a wrong F0 may be extracted by YAPPT resulting in a quality degradation. 
+- For noisy source speech, a wrong F0 may be extracted by YAPPT resulting in a quality degradation.
+- 
 <!--
 ## Voice Conversion (Method 2: 2-Stage Voice Conversion for timbre and *prosody* conversion)
 - After paper submittion, we found that this 2-stage VC pipeline could also change the prosody of speech. Enjoy VC with two kinds of methods
@@ -243,7 +244,7 @@ In my very personal opinion, VITS is still the best TTS model I have ever seen. 
     text_min = 1
     text_max = 200
   ```
---> TTV v2 may reduce this issue significantly...!
+TTV v2 may reduce this issue significantly...!
 
 ## Results [[Download]](https://drive.google.com/drive/folders/1xCrZQy9s5MT38RMQxKAtkoWUgxT5qYYW?usp=sharing)
 We have attached all samples from LibriTTS test-clean and test-other. 
