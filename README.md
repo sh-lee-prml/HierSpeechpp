@@ -152,31 +152,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc.py \
 - Find your best parameters for your style prompt 😵
 - Voice Conversion is vulnerable to noisy target prompt so we recommend to utilize a denoiser with noisy prompt
 - For noisy source speech, a wrong F0 may be extracted by YAPPT resulting in a quality degradation.
-- 
-<!--
-## Voice Conversion (Method 2: 2-Stage Voice Conversion for timbre and *prosody* conversion)
-- After paper submittion, we found that this 2-stage VC pipeline could also change the prosody of speech. Enjoy VC with two kinds of methods
-- In addition, this method has better robustness with source speech because of utilizing pitch prediction with target style, not pitch extraction algorithm.
-- However, this method may transfer the noise of target speech twice so we recommend the denoised style or clean target speech. 
 
-1. Stage1-TTV: W2V (From source speech) --> Posterior (w. Source Style) --> Flow (w. Source Style) --> Flow^{-1} (w. Target Style) --> Decoder (w. Target Style) --> W2V, F0
-2. Stage2-Hierarchical Speech Synthesizer
-```
-sh inference_vc.sh
-
-# --ckpt "logs/hierspeechpp_libritts460/hierspeechpp_lt460_ckpt.pth" \ LibriTTS-460
-# --ckpt "logs/hierspeechpp_libritts960/hierspeechpp_lt960_ckpt.pth" \ LibriTTS-960
-# --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v1_ckpt.pth" \ Large_v1 epoch 60 (paper version)
-# --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v2_ckpt.pth" \ Large_v2 epoch 110 (08. Nov. 2023)
-
-CUDA_VISIBLE_DEVICES=0 python3 inference_vc_v2.py \
-                --ckpt "logs/hierspeechpp_eng_kor/hierspeechpp_v2_ckpt.pth" \
-                --output_dir "vc_results_eng_kor_v2" \
-                --noise_scale_vc "0.333" \
-                --noise_scale_ttv "0.333" \
-                --denoise_ratio "0"
-```
--->
 
 ## Speech Super-resolution
 - SpeechSR-24k and SpeechSR-48 are provided in TTS pipeline. If you want to use SpeechSR only, please refer inference_speechsr.py.
