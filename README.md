@@ -42,7 +42,7 @@ This paper is an extenstion version of above papers.
 -->
 ### Text-to-Vec (TTV)
 - [x] TTV-v1 (LibriTTS-train-960)
-- [ ] TTV-v2 (We are currently training an improved and larger TTV model for better prosody modeling)  
+- [ ] TTV-v2 (We are currently training a multi-lingual TTV model)  
 <!--
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 -->
@@ -192,12 +192,9 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc_v2.py \
 ## TTV-v2
 - TTV-v1 is a simple model which is very slightly modified from VITS. Although this simple TTV could synthesize a speech with high-quality and high speaker similarity, we thought that there is room for improvement in terms of expressiveness such as prosody modeling.
 - For TTV-v2, we modify some components and training process (Model size: 107M --> 278M)
-  1. Text Encoder: (1) Unconditional Transformer (2 Block) --> (2) Transformer using AdaLN-Zero (4 Block) --> (3) Unconditional Transformer with long-skip connection from (1) (2 Block)
-  2. Duration Predictor: Stochastic DP --> Feedforward DP, Conv --> Transformer using AdaLN-Zero
-  3. Intermediate hidden size: 256 --> 384 
-  4. Style encoder hidden size: 256 --> 384
-  5. Loss masking for wav2vec reconstruction loss (I left out masking the loss for zero-padding sequences😥)
-  6. For long sentence generation, we finetune the model with full LibriTTS-train dataset without data filtering (Decrease the learning rate to 2e-5 with batch size of 8 per gpus)    
+  1. Intermediate hidden size: 256 --> 384 
+  2. Loss masking for wav2vec reconstruction loss (I left out masking the loss for zero-padding sequences😥)
+  3. For long sentence generation, we finetune the model with full LibriTTS-train dataset without data filtering (Decrease the learning rate to 2e-5 with batch size of 8 per gpus)    
 
 ## GAN VS Diffusion
 <details> 
