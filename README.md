@@ -130,7 +130,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
 # Mixup (Recommended 0.6~0.8)
 --denoise_rate "0.8" 
 ```
-## Voice Conversion (Method 1: Paper Version for only timbre conversion)
+## Voice Conversion
 - This method only utilize a hierarchical speech synthesizer for voice conversion. 
 ```
 sh inference_vc.sh
@@ -152,7 +152,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc.py \
 - Find your best parameters for your style prompt 😵
 - Voice Conversion is vulnerable to noisy target prompt so we recommend to utilize a denoiser with noisy prompt
 - For noisy source speech, a wrong F0 may be extracted by YAPPT resulting in a quality degradation. 
-
+<!--
 ## Voice Conversion (Method 2: 2-Stage Voice Conversion for timbre and *prosody* conversion)
 - After paper submittion, we found that this 2-stage VC pipeline could also change the prosody of speech. Enjoy VC with two kinds of methods
 - In addition, this method has better robustness with source speech because of utilizing pitch prediction with target style, not pitch extraction algorithm.
@@ -175,6 +175,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc_v2.py \
                 --noise_scale_ttv "0.333" \
                 --denoise_ratio "0"
 ```
+-->
 
 ## Speech Super-resolution
 - SpeechSR-24k and SpeechSR-48 are provided in TTS pipeline. If you want to use SpeechSR only, please refer inference_speechsr.py.
