@@ -29,8 +29,6 @@ This repository contains:
 
 This paper is an extenstion version of above papers.
 
-
-
 ## Todo
 ### Hierarchical Speech Synthesizer
 - [x] HierSpeechpp-Backbone
