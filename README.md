@@ -174,7 +174,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc.py \
 
 ## GAN VS Diffusion
 <details> 
-<summary> [Read Moro] </summary>
+<summary> [Read More] </summary>
 We think that we could not confirm which is better yet. There are many advatanges for each model so you can utilize each model for your own purposes and each study must be actively conducted simultaneously.  
 
 ### GAN (Specifically, GAN-based End-to-End Speech Synthesis Models)
@@ -225,7 +225,7 @@ We have attached all samples from LibriTTS test-clean and test-other.
 
 ## Reference
 <details> 
-<summary> [Read Moro] </summary>
+<summary> [Read More] </summary>
  
 ### Our Previous Works
 - HierSpeech/HierSpeech-U for Hierarchical Speech Synthesis Framework: https://openreview.net/forum?id=awdyRVnfQKX
