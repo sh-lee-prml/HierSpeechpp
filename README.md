@@ -18,7 +18,7 @@ This repository contains:
 
 - 🪐 A PyTorch implementation of HierSpeech++ (TTV, Hierarchical Speech Synthesizer, SpeechSR)
 - ⚡️ Pre-trained HierSpeech++ models trained on LibriTTS (Train-460, Train-960, and more dataset)
-- [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/HierSpeech/HierSpeech_TTS) Gradio Demo with HuggingFace  HuggingFace supports us a GPU instance. Thanks 😊
+- [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/HierSpeech/HierSpeech_TTS) Gradio Demo on HuggingFace. HuggingFace supports us a GPU instance. Thanks 😊
 <!--
 - 💥 A Colab notebook for running pre-trained HierSpeech++ models (Soon..)
 🛸 A HierSpeech++ training script (Will be released soon)
