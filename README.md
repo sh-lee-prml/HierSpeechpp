@@ -33,8 +33,8 @@ This paper is an extenstion version of above papers.
 ### Hierarchical Speech Synthesizer
 - [x] HierSpeechpp-Backbone (LibriTTS-train-460)
 - [x] HierSpeechpp-Backbone (LibriTTS-train-960)
-- [x] HierSpeechpp-Backbone-60epoch (LibriTTS-train-960, Libri-light (Small, Medium), Expresso, MSSS(Kor), NIKL(Kor))
-- [x] HierSpeechpp-Backbone-200epoch (LibriTTS-train-960, Libri-light (Small, Medium), Expresso, MSSS(Kor), NIKL(Kor))
+- [x] HierSpeechpp-Backbone-60epoch (LibriTTS-train-960, Libri-light (Medium), Expresso, MSSS(Kor), NIKL(Kor))
+- [x] HierSpeechpp-Backbone-200epoch (LibriTTS-train-960, Libri-light (Medium), Expresso, MSSS(Kor), NIKL(Kor))
 <!--
 - [ ] HierSpeech-Lite (Fast and Efficient Zero-shot Speech Synthesizer)
 - [ ] HierSinger (Zero-shot Singing Voice Synthesizer)
