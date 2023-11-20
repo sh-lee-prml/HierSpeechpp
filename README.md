@@ -1,5 +1,5 @@
 # HierSpeech++: Bridging the Gap between Semantic and Acoustic Representation by Hierarchical Variational Inference for Zero-shot Speech Synthesis
-The official implementation of HierSpeech2 | [Paper]() | [Demo page](https://sh-lee-prml.github.io/HierSpeechpp-demo/) | [Checkpoint](https://drive.google.com/drive/folders/1-L_90BlCkbPyKWWHTUjt5Fsu3kz0du0w?usp=sharing) | 
+The official implementation of HierSpeech2 | [Paper]() | [Demo page](https://sh-lee-prml.github.io/HierSpeechpp-demo/) | [Checkpoint](https://drive.google.com/drive/folders/1-L_90BlCkbPyKWWHTUjt5Fsu3kz0du0w?usp=sharing) | [HuggingFace](https://huggingface.co/spaces/HierSpeech/HierSpeech_TTS)
 
 **Sang-Hoon Lee, Ha-Yeong Choi, Seung-Bin Kim, Seong-Whan Lee**
 
