@@ -165,7 +165,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc.py \
 - When using a long reference audio, there is an out-of-memory issue with this model so we have a plan to learn a memory efficient speech denoiser in the future.
 - If you have a problem, we recommend to use a clean reference audio or denoised audio before TTS pipeline or denoise the audio with cpu (but this will be slow😥). 
 
-## TTV-v2
+## TTV-v2 (WIP)
 - TTV-v1 is a simple model which is very slightly modified from VITS. Although this simple TTV could synthesize a speech with high-quality and high speaker similarity, we thought that there is room for improvement in terms of expressiveness such as prosody modeling.
 - For TTV-v2, we modify some components and training process (Model size: 107M --> 278M)
   1. Intermediate hidden size: 256 --> 384 
