@@ -271,5 +271,4 @@ Thanks for all nice works.
 </details>
 
 ## LICENSE
-- Code in this repo: MIT License
-- Model Weights: CC-BY-NC-4.0 license
+HierSpeech++ © 2023 by Sang-Hoon Lee is licensed under CC BY-NC-SA 4.0 
