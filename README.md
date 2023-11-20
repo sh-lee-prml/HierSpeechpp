@@ -170,7 +170,8 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc.py \
 - For TTV-v2, we modify some components and training process (Model size: 107M --> 278M)
   1. Intermediate hidden size: 256 --> 384 
   2. Loss masking for wav2vec reconstruction loss (I left out masking the loss for zero-padding sequences😥)
-  3. For long sentence generation, we finetune the model with full LibriTTS-train dataset without data filtering (Decrease the learning rate to 2e-5 with batch size of 8 per gpus)    
+  3. For long sentence generation, we finetune the model with full LibriTTS-train dataset without data filtering (Decrease the learning rate to 2e-5 with batch size of 8 per gpus)
+  4. Multi-lingual Dataset (We are training the model with Eng, Indic, and Kor dataset now)    
 
 ## GAN VS Diffusion
 <details> 
