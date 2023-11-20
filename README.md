@@ -269,6 +269,3 @@ Our repository is heavily based on [VITS](https://github.com/jaywalnut310/vits).
   
 Thanks for all nice works. 
 </details>
-
-## LICENSE
-HierSpeech++ © 2023 by Sang-Hoon Lee is licensed under CC BY-NC-SA 4.0 
