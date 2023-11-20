@@ -145,8 +145,12 @@ def VC(a, hierspeech):
             net_g.voice_conversion_noise_control(x_w2v, x_length, trg_mel, trg_length2, denorm_f0, noise_scale=a.noise_scale_vc, denoise_ratio=a.denoise_ratio)
                 
         ## SpeechSR (Optional) (16k Audio --> 24k or 48k Audio)
-        if a.output_sr == 48000 or 24000:
+        if a.output_sr == 48000: 
             converted_audio = speechsr(converted_audio)
+        elif a.output_sr == 24000:
+            converted_audio = speechsr(converted_audio)
+        else:
+            converted_audio = converted_audio
 
     converted_audio = converted_audio.squeeze()
     
