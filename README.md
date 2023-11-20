@@ -31,7 +31,10 @@ This paper is an extenstion version of above papers.
 
 ## Todo
 ### Hierarchical Speech Synthesizer
-- [x] HierSpeechpp-Backbone
+- [x] HierSpeechpp-Backbone (LibriTTS-train-460)
+- [x] HierSpeechpp-Backbone (LibriTTS-train-960)
+- [x] HierSpeechpp-Backbone-60epoch (LibriTTS-train-960, Libri-light (Small, Medium), Expresso, MSSS(Kor), NIKL(Kor))
+- [x] HierSpeechpp-Backbone-200epoch (LibriTTS-train-960, Libri-light (Small, Medium), Expresso, MSSS(Kor), NIKL(Kor))
 <!--
 - [ ] HierSpeech-Lite (Fast and Efficient Zero-shot Speech Synthesizer)
 - [ ] HierSinger (Zero-shot Singing Voice Synthesizer)
@@ -71,7 +74,7 @@ sudo apt-get install espeak-ng
 |------|:---:|:---:|:---:|:---:|:---:|:---:|
 | HierSpeech2|16 kHz|97M| LibriTTS (train-460) |245|1,151|[[Download]](https://drive.google.com/drive/folders/14FTu0ZWux0zAD7ev4O1l6lKslQcdmebL?usp=sharing)|
 | HierSpeech2|16 kHz|97M| LibriTTS (train-960) |555|2,311|[[Download]](https://drive.google.com/drive/folders/1sFQP-8iS8z9ofCkE7szXNM_JEy4nKg41?usp=drive_link)|
-| HierSpeech2|16 kHz|97M| LibriTTS (train-960), Libri-light (Small, Medium), Expresso, MMS(Kor), NIKL(Kor)|2,796| 7,299 |[[Download]](https://drive.google.com/drive/folders/14jaDUBgrjVA7bCODJqAEirDwRlvJe272?usp=drive_link)|
+| HierSpeech2|16 kHz|97M| LibriTTS (train-960), Libri-light (Small, Medium), Expresso, MSSS(Kor), NIKL(Kor)|2,796| 7,299 |[[Download]](https://drive.google.com/drive/folders/14jaDUBgrjVA7bCODJqAEirDwRlvJe272?usp=drive_link)|
 
 <!--
 | HierSpeech2-Lite|16 kHz|-| LibriTTS (train-960))  |-|
