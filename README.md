@@ -228,6 +228,8 @@ TTV v2 may reduce this issue significantly...!
 We have attached all samples from LibriTTS test-clean and test-other. 
 
 ## Reference
+Our repository is heavily based on [VITS](https://github.com/jaywalnut310/vits). 
+
 <details> 
 <summary> [Read More] </summary>
  
