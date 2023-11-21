@@ -21,8 +21,8 @@ This repository contains:
 🛸 A HierSpeech++ training script (Will be released soon)
 -->
 ## Previous Our Works
-- [1] HierSpeech: Bridging the Gap between Text and Speech by Hierarchical Variational Inference using Self-supervised Representations for Speech Synthesis
-- [2] HierVST: Hierarchical Adaptive Zero-shot Voice Style Transfer
+- [NeurIPS2022] HierSpeech: Bridging the Gap between Text and Speech by Hierarchical Variational Inference using Self-supervised Representations for Speech Synthesis
+- [Interspeech2023] HierVST: Hierarchical Adaptive Zero-shot Voice Style Transfer
 
 This paper is an extenstion version of above papers.
 
