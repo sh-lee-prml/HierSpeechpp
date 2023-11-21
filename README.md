@@ -169,7 +169,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc.py \
 - If you have a problem, we recommend to use a clean reference audio or denoised audio before TTS pipeline or denoise the audio with cpu (but this will be slow😥).
 - (21, Nov. 2023) Sliced window denoising. This may reduce a burden for denoising a speech.
   ```
-         if denoise == 0:
+        if denoise == 0:
             audio = torch.cat([audio.cuda(), audio.cuda()], dim=0)
         else:
             with torch.no_grad():
