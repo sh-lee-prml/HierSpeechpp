@@ -278,10 +278,12 @@ Our repository is heavily based on [VITS](https://github.com/jaywalnut310/vits) 
 ### Other Large Language Model based Speech Synthesis Model
 - VALL-E & VALL-E-X
 - SPEAR-TTS
-- NaturalSpeech 2
 - Make-a-Voice
 - MEGA-TTS & MEGA-TTS 2
 - UniAudio
+
+### Diffusion-based Model
+- NaturalSpeech 2
 
 ### AdaLN-zero
 - Dit: https://github.com/facebookresearch/DiT
