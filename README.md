@@ -128,7 +128,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
 --denoise_ratio "0"
 # with denoiser
 --denoise_ratio "1"
-# Mixup (Recommended 0.6~0.8)
+# Mixup (Recommend 0.6~0.8)
 --denoise_rate "0.8" 
 ```
 ## Voice Conversion
