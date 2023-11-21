@@ -166,7 +166,26 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc.py \
 ## Speech Denoising for Noise-free Speech Synthesis (Only used in Speaker Encoder during Inference)
 - For denoised style prompt, we utilize a denoiser [(MP-SENet)](https://github.com/yxlu-0102/MP-SENet).
 - When using a long reference audio, there is an out-of-memory issue with this model so we have a plan to learn a memory efficient speech denoiser in the future.
-- If you have a problem, we recommend to use a clean reference audio or denoised audio before TTS pipeline or denoise the audio with cpu (but this will be slow😥). 
+- If you have a problem, we recommend to use a clean reference audio or denoised audio before TTS pipeline or denoise the audio with cpu (but this will be slow😥).
+- (21, Nov. 2023) Sliced window denoising. This may reduce a burden for denoising a speech.
+  ```
+         if denoise == 0:
+            audio = torch.cat([audio.cuda(), audio.cuda()], dim=0)
+        else:
+            with torch.no_grad():
+                
+                if ori_prompt_len > 80000:
+                    denoised_audio = []
+                    for i in range((ori_prompt_len//80000)):
+                        denoised_audio.append(denoise(audio.squeeze(0).cuda()[i*80000:(i+1)*80000], denoiser, hps_denoiser))
+                    
+                    denoised_audio.append(denoise(audio.squeeze(0).cuda()[(i+1)*80000:], denoiser, hps_denoiser))
+                    denoised_audio = torch.cat(denoised_audio, dim=1)
+                else:
+                    denoised_audio = denoise(audio.squeeze(0).cuda(), denoiser, hps_denoiser)
+
+            audio = torch.cat([audio.cuda(), denoised_audio[:,:audio.shape[-1]]], dim=0)
+  ``` 
 
 ## TTV-v2 (WIP)
 - TTV-v1 is a simple model which is very slightly modified from VITS. Although this simple TTV could synthesize a speech with high-quality and high speaker similarity, we thought that there is room for improvement in terms of expressiveness such as prosody modeling.
