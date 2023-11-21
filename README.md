@@ -260,7 +260,7 @@ Our repository is heavily based on [VITS](https://github.com/jaywalnut310/vits) 
   
 ### Baseline Model
 - VITS: https://github.com/jaywalnut310/vits
-- NaturalSpeech 
+- NaturalSpeech: https://speechresearch.github.io/naturalspeech/ 
 - NANSY for Audio Perturbation: https://github.com/revsic/torch-nansy
 - Speech Resynthesis: https://github.com/facebookresearch/speech-resynthesis
   
