@@ -121,7 +121,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference.py \
 ```
 - For better robustness, we recommend a noise_scale of 0.333
 - For better expressiveness, we recommend a noise_scale of 0.667
-- Find your best parameters for your style prompt 😵
+- Find your best parameters for your style prompt
 ### Noise Control 
 ```
 # without denoiser
@@ -150,7 +150,7 @@ CUDA_VISIBLE_DEVICES=0 python3 inference_vc.py \
 ```
 - For better robustness, we recommend a noise_scale of 0.333
 - For better expressiveness, we recommend a noise_scale of 0.667
-- Find your best parameters for your style prompt 😵
+- Find your best parameters for your style prompt
 - Voice Conversion is vulnerable to noisy target prompt so we recommend to utilize a denoiser with noisy prompt
 - For noisy source speech, a wrong F0 may be extracted by YAPPT resulting in a quality degradation.
 
