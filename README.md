@@ -24,7 +24,7 @@ This repository contains:
 - [NeurIPS2022] HierSpeech: Bridging the Gap between Text and Speech by Hierarchical Variational Inference using Self-supervised Representations for Speech Synthesis
 - [Interspeech2023] HierVST: Hierarchical Adaptive Zero-shot Voice Style Transfer
 
-This paper is an extenstion version of above papers.
+This paper is an extension version of above papers.
 
 ## Todo
 ### Hierarchical Speech Synthesizer
