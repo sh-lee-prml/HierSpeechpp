@@ -176,7 +176,7 @@ def model_load(a):
     state_dict = load_checkpoint(a.denoiser_ckpt, device)
     denoiser.load_state_dict(state_dict['generator'])
     denoiser.eval()
-    return net_g, text2w2v, audiosr, denoiser, mel_fn
+    return net_g, text2w2v, speechsr, denoiser, mel_fn
 
 def inference(a):
     
