@@ -12,8 +12,8 @@ from hierspeechpp_speechsynthesizer import (
 )
 from ttv_v1.text import text_to_sequence
 from ttv_v1.t2w2v_transformer import SynthesizerTrn as Text2W2V
-from speechsr24k.speechsr import SynthesizerTrn as AudioSR
-from speechsr48k.speechsr import SynthesizerTrn as AudioSR48
+from speechsr24k.speechsr import SynthesizerTrn as SpeechSR24
+from speechsr48k.speechsr import SynthesizerTrn as SpeechSR48
 from denoiser.generator import MPNet
 from denoiser.infer import denoise
 
@@ -49,7 +49,7 @@ def add_blank_token(text):
 
 def tts(text, a, hierspeech):
     
-    net_g, text2w2v, audiosr, denoiser, mel_fn = hierspeech
+    net_g, text2w2v, speechsr, denoiser, mel_fn = hierspeech
 
     os.makedirs(a.output_dir, exist_ok=True)
     text = text_to_sequence(str(text), ["english_cleaners2"])
@@ -156,14 +156,14 @@ def model_load(a):
     text2w2v.eval()
 
     if a.output_sr == 48000:
-        audiosr = AudioSR48(h_sr48.data.n_mel_channels,
+        speechsr = SpeechSR48(h_sr48.data.n_mel_channels,
             h_sr48.train.segment_size // h_sr48.data.hop_length,
             **h_sr48.model).cuda()
         utils.load_checkpoint(a.ckpt_sr48, audiosr, None)
         audiosr.eval()
        
     elif a.output_sr == 24000:
-        audiosr = AudioSR(h_sr.data.n_mel_channels,
+        speechsr = SpeechSR24(h_sr.data.n_mel_channels,
         h_sr.train.segment_size // h_sr.data.hop_length,
         **h_sr.model).cuda()
         utils.load_checkpoint(a.ckpt_sr, audiosr, None)
