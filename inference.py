@@ -106,9 +106,9 @@ def tts(text, a, hierspeech):
                 
         ## SpeechSR (Optional) (16k Audio --> 24k or 48k Audio)
         if a.output_sr == 48000: 
-            converted_audio = speechsr(converted_audio)
+            converted_audio = audiosr(converted_audio)
         elif a.output_sr == 24000:
-            converted_audio = speechsr(converted_audio)
+            converted_audio = audiosr(converted_audio)
         else:
             converted_audio = converted_audio
 
