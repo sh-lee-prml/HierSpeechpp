@@ -159,18 +159,18 @@ def model_load(a):
         speechsr = SpeechSR48(h_sr48.data.n_mel_channels,
             h_sr48.train.segment_size // h_sr48.data.hop_length,
             **h_sr48.model).cuda()
-        utils.load_checkpoint(a.ckpt_sr48, audiosr, None)
-        audiosr.eval()
+        utils.load_checkpoint(a.ckpt_sr48, speechsr, None)
+        speechsr.eval()
        
     elif a.output_sr == 24000:
         speechsr = SpeechSR24(h_sr.data.n_mel_channels,
         h_sr.train.segment_size // h_sr.data.hop_length,
         **h_sr.model).cuda()
-        utils.load_checkpoint(a.ckpt_sr, audiosr, None)
-        audiosr.eval()
+        utils.load_checkpoint(a.ckpt_sr, speechsr, None)
+        speechsr.eval()
       
     else:
-        audiosr = None
+        speechsr = None
     
     denoiser = MPNet(hps_denoiser).cuda()
     state_dict = load_checkpoint(a.denoiser_ckpt, device)
