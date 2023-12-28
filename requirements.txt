@@ -11,5 +11,5 @@ timm==0.6.13
 torch==1.13.1+cu117
 torchaudio==0.13.1+cu117
 tqdm==4.65.0
-transformers==4.34.0
+transformers==4.36.0
 Unidecode==1.3.7
