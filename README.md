@@ -26,6 +26,11 @@ This repository contains:
 
 This paper is an extension version of above papers.
 
+## Update
+### 24.01.19
+- We have released the `TTV_v1` training code. Regardless of the language, you can train TTV using personal dataset, and perform speech synthesis using the pre-trained `Hierarchical Speech Synthesizer` model.
+
+
 ## Todo
 ### Hierarchical Speech Synthesizer
 - [x] HierSpeechpp-Backbone (LibriTTS-train-460)
@@ -40,7 +45,7 @@ This paper is an extension version of above papers.
 -->
 ### Text-to-Vec (TTV)
 - [x] TTV-v1 (LibriTTS-train-960)
-- [ ] TTV-v2 (We are currently training a multi-lingual TTV model)  
+- [ ] TTV-v2 (Multi-lingual TTV)  
 <!--
 - [ ] Hierarchical Text-to-Vec (For Much More Expressive Text-to-Speech)
 -->
