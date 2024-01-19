@@ -1,23 +1,20 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
-from ttv_v1 import modules
-import attentions
-
 from torch.nn import Conv1d, ConvTranspose1d
 from torch.nn.utils import weight_norm, remove_weight_norm
-from commons import init_weights
 
 import typing as tp
 import transformers
 import math
-from ttv_v1.styleencoder import StyleEncoder
 import commons
+import attentions  
+from commons import init_weights
+
+from ttv_v1 import modules
 from ttv_v1.modules import WN
-
-def get_2d_padding(kernel_size: tp.Tuple[int, int], dilation: tp.Tuple[int, int] = (1, 1)):
-    return (((kernel_size[0] - 1) * dilation[0]) // 2, ((kernel_size[1] - 1) * dilation[1]) // 2)
-
+from ttv_v1.styleencoder import StyleEncoder 
+ 
 class Wav2vec2(torch.nn.Module):
     def __init__(self, layer=7):
 
@@ -25,8 +22,7 @@ class Wav2vec2(torch.nn.Module):
            More specifically, we used the output from the 12th layer of the 24-layer transformer encoder.
         """
         super().__init__()
-
-        # self.wav2vec2 = transformers.Wav2Vec2ForPreTraining.from_pretrained("facebook/wav2vec2-xls-r-300m")
+ 
         self.wav2vec2 = transformers.Wav2Vec2ForPreTraining.from_pretrained("facebook/mms-300m")
 
         for param in self.wav2vec2.parameters():
@@ -315,8 +311,7 @@ class PitchPredictor(nn.Module):
 
     self.cond = Conv1d(256, upsample_initial_channel, 1)
 
-  def forward(self, x,  g):
-
+  def forward(self, x,  g): 
     x = self.conv_pre(x) + self.cond(g)
 
     for i in range(self.num_upsamples):
@@ -387,19 +382,61 @@ class SynthesizerTrn(nn.Module):
     self.pp = PitchPredictor()
     self.phoneme_classifier = Conv1d(inter_channels, 178, 1, bias=False)
 
-  @torch.no_grad()
-  def infer(self, x, x_lengths, y_mel, y_length, noise_scale=1, noise_scale_w=1, length_scale=1):
-
-    y_mask = torch.unsqueeze(commons.sequence_mask(y_length, y_mel.size(2)), 1).to(y_mel.dtype)
-
+  def forward(self, w2v, length, x_text, text_length, y_mel): 
+    y_mask = torch.unsqueeze(commons.sequence_mask(length, y_mel.size(2)), 1).to(y_mel.dtype)
+    
     # Speaker embedding from mel (Style Encoder)
     g = self.emb_g(y_mel, y_mask).unsqueeze(-1)
     
-    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths, g=g)
+    # Text Encoder
+    x, m_p, logs_p, x_mask = self.enc_p(x_text, text_length, g=g)
 
+    # Linguistic Encoder (from XLS-R)
+    z, m_q, logs_q = self.enc_q(w2v, y_mask, g=g) 
+    phoneme_predicted = self.phoneme_classifier(z*y_mask)
 
-    logw = self.dp(x, x_mask, g=g, reverse=True, noise_scale=noise_scale_w)
+    # Prosody distillation
+    w2v_predicted = self.w2v_decoder(z, y_mask, g=g)
 
+    # Normalizing flow
+    z_p = self.flow(z, y_mask, g=g)
+
+    # Slicing for windowed generator training 
+    w2v_slice, ids_slice = commons.rand_slice_segments(w2v, length, 60)
+
+    # Pitch Predictor
+    pitch_predicted = self.pp(w2v_slice, g)
+
+    with torch.no_grad():
+      # negative cross-entropy
+      s_p_sq_r = torch.exp(-2 * logs_p) # [b, d, t]
+      neg_cent1 = torch.sum(-0.5 * math.log(2 * math.pi) - logs_p, [1], keepdim=True) # [b, 1, t_s]
+      neg_cent2 = torch.matmul(-0.5 * (z_p ** 2).transpose(1, 2), s_p_sq_r) # [b, t_t, d] x [b, d, t_s] = [b, t_t, t_s]
+      neg_cent3 = torch.matmul(z_p.transpose(1, 2), (m_p * s_p_sq_r)) # [b, t_t, d] x [b, d, t_s] = [b, t_t, t_s]
+      neg_cent4 = torch.sum(-0.5 * (m_p ** 2) * s_p_sq_r, [1], keepdim=True) # [b, 1, t_s]
+      neg_cent = neg_cent1 + neg_cent2 + neg_cent3 + neg_cent4
+
+      attn_mask = torch.unsqueeze(x_mask, 2) * torch.unsqueeze(y_mask, -1)
+      attn = monotonic_align.maximum_path(neg_cent, attn_mask.squeeze(1)).unsqueeze(1).detach()
+
+    w = attn.sum(2) 
+    l_length = self.dp(x, x_mask, w, g=g)
+    l_length = l_length / torch.sum(x_mask)
+
+    # expand prior
+    m_p = torch.matmul(attn.squeeze(1), m_p.transpose(1, 2)).transpose(1, 2)
+    logs_p = torch.matmul(attn.squeeze(1), logs_p.transpose(1, 2)).transpose(1, 2)
+
+    return w2v_predicted, (z, z_p, m_q, logs_q), (m_p, logs_p), y_mask, pitch_predicted, ids_slice, l_length, phoneme_predicted 
+
+  @torch.no_grad()
+  def infer(self, x, x_lengths, y_mel, y_length, noise_scale=1, noise_scale_w=1, length_scale=1): 
+    y_mask = torch.unsqueeze(commons.sequence_mask(y_length, y_mel.size(2)), 1).to(y_mel.dtype)
+ 
+    g = self.emb_g(y_mel, y_mask).unsqueeze(-1) 
+    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths, g=g) 
+ 
+    logw = self.dp(x, x_mask, g=g, reverse=True, noise_scale=noise_scale_w) 
       
     w = torch.exp(logw) * x_mask * length_scale
     w_ceil = torch.ceil(w)
@@ -423,16 +460,13 @@ class SynthesizerTrn(nn.Module):
   def infer_noise_control(self, x, x_lengths, y_mel, y_length, noise_scale=0.333, noise_scale_w=1, length_scale=1, denoise_ratio = 0):
 
     y_mask = torch.unsqueeze(commons.sequence_mask(y_length, y_mel.size(2)), 1).to(y_mel.dtype)
-
-    # Speaker embedding from mel (Style Encoder)
+ 
     g = self.emb_g(y_mel, y_mask).unsqueeze(-1)
     
     g_org, g_denoise = g[:1, :, :], g[1:, :, :]
-    g = (1-denoise_ratio)*g_org + denoise_ratio*g_denoise
+    g = (1-denoise_ratio)*g_org + denoise_ratio*g_denoise 
 
-
-    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths, g=g)
-
+    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths, g=g) 
 
     logw = self.dp(x, x_mask, g=g, reverse=True, noise_scale=noise_scale_w)
       
