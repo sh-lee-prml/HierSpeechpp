@@ -18,8 +18,8 @@ from ttv_v1.styleencoder import StyleEncoder
 class Wav2vec2(torch.nn.Module):
     def __init__(self, layer=7):
 
-        """we use the intermediate features of xls-r-300m.
-           More specifically, we used the output from the 12th layer of the 24-layer transformer encoder.
+        """we use the intermediate features of MMS (https://arxiv.org/abs/2305.13516).
+           More specifically, we used the output from the 7th layer of the 24-layer transformer encoder.
         """
         super().__init__()
  
@@ -30,6 +30,7 @@ class Wav2vec2(torch.nn.Module):
             param.grad = None
         self.wav2vec2.eval()
         self.feature_layer = layer
+     
     @torch.no_grad()
     def forward(self, x):
         """
