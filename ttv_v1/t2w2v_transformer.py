@@ -313,6 +313,8 @@ class PitchPredictor(nn.Module):
     self.cond = Conv1d(256, upsample_initial_channel, 1)
 
   def forward(self, x,  g): 
+    x = x.detach()
+    g = g.detach()
     x = self.conv_pre(x) + self.cond(g)
 
     for i in range(self.num_upsamples):
