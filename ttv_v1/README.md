@@ -2,7 +2,7 @@
 
 ### ✔️ Step 1: Extract features.
 
-Extract each feature using `extract_feature.sh` in the preprocessing directory.
+Extract each feature using `./ttv_v1/preprocessing/extract_feature.sh` in the preprocessing directory.
 ```
 |-- preprocessing
 |    |-- extract_f0.py
@@ -36,7 +36,7 @@ parser.add_argument('-o', '--output_dir', default='/workspace/ha0/data_preproces
 ```
 
  
-By running `prepare_filelist.py`, a filelist can be created with the filtered data. 
+By running `./ttv_v1/preprocessing/prepare_filelist.py`, a filelist can be created with the filtered data. 
  
 ```
 python3 prepare_filelist.py
