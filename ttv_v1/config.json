@@ -1,6 +1,6 @@
 {
     "train": {
-      "log_interval": 200,
+      "log_interval": 1000,
       "eval_interval": 10000,
       "save_interval": 10000,
       "seed": 1234,
@@ -11,7 +11,7 @@
       "batch_size": 32,
       "fp16_run": false,
       "lr_decay": 0.999,
-      "segment_size": 163840,
+      "segment_size": 192000,
       "init_lr_ratio": 1,
       "warmup_epochs": 0,
       "c_mel": 10,
