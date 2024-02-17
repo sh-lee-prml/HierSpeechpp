@@ -150,7 +150,7 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, scaler, schedulers, loade
             
             f0 = commons.slice_segments_audio(f0.squeeze(1), ids_slice * 4, 240)  
             loss_dur = torch.sum(l_length)
-            loss_w2v = (torch.sum(torch.abs(w2v_x-(w2v_predicted*mask)))/(torch.sum(mask)*1024)) * hps.train.c_mel 
+            loss_w2v = F.l1_loss(w2v_x, w2v_predicted) * hps.train.c_mel 
             loss_f0 = F.l1_loss(f0, pitch_predicted.squeeze(1))
             loss_kl = kl_loss(z_p, logs_q, m_p, logs_p, mask) * hps.train.c_kl
 
