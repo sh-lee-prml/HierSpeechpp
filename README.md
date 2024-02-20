@@ -27,6 +27,8 @@ This repository contains:
 This paper is an extension version of above papers.
 
 ## Update
+### 24.02.20
+- We get back the reconstruction loss for ttv. Adding the loss masking for zero-padding decrease the tts performance by generating a random long pause in generated speech and repeated sound(It may affect the loss balance). Sorry for the confusion. I revised it as a paper version.  
 ### 24.01.19
 - We have released the `TTV_v1` training code. Regardless of the language, you can train TTV using personal dataset, and perform speech synthesis using the pre-trained `Hierarchical Speech Synthesizer` model.
 
