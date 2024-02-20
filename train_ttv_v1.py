@@ -55,7 +55,7 @@ def run(rank, n_gpus, hps):
         f_min=hps.data.mel_fmin,
         f_max=hps.data.mel_fmax,
         n_mels=hps.data.n_mel_channels,
-        window_fn=torch.hann_windows
+        window_fn=torch.hann_window
     ).cuda(rank)
 
     train_dataset = AudioDataset(hps, training=True)
